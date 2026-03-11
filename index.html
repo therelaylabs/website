@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Relay Labs — From Cold Lead to Closed Deal — Automated.</title>
+<meta name="description" content="We build AI-powered automations, lead generation systems, and voice agents for Quebec businesses. From cold lead to closed deal — automated.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Relay Labs — From Cold Lead to Closed Deal — Automated.">
+<meta property="og:description" content="AI-powered automations, lead generation systems, and intelligent customer service for businesses that want to scale without the overhead.">
+<meta property="og:url" content="https://therelaylabs.com">
+<meta property="og:site_name" content="The Relay Labs">
+<meta property="og:locale" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta property="og:image" content="https://therelaylabs.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Relay Labs — AI + Automation Agency">
+<meta name="twitter:description" content="From cold lead to closed deal — automated. AI automations, lead gen, and voice agents for Quebec businesses.">
+<meta name="twitter:image" content="https://therelaylabs.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' fill='none'%3E%3Crect width='50' height='50' rx='12' fill='%23161616' stroke='%232A2A2A' stroke-width='1'/%3E%3Crect x='14' y='12' width='4.5' height='26' rx='2' fill='%23EDEDED'/%3E%3Cpath d='M18.5 12 H28 C33 12 36 15.5 36 19.5 C36 23.5 33 27 28 27 H18.5' stroke='%23EDEDED' stroke-width='4.5' stroke-linecap='round' fill='none'/%3E%3Cline x1='26' y1='25' x2='36' y2='38' stroke='%23EDEDED' stroke-width='4.5' stroke-linecap='round'/%3E%3Ccircle cx='37' cy='12' r='3' fill='%234ADE80'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===================== RESET & BASE ===================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#0a0a0a;color:#e0e0e0;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{cursor:pointer;font-family:inherit}
+
+/* ===================== LANGUAGE TOGGLE ===================== */
+[data-lang="en"] .fr{display:none!important}
+[data-lang="fr"] .en{display:none!important}
+
+/* ===================== NAV ===================== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-logo{display:flex;align-items:center;gap:0.7rem;text-decoration:none}
+.nav-logo-mark{width:36px;height:36px;flex-shrink:0}
+.nav-logo-text{display:flex;flex-direction:column;gap:2px}
+.nav-logo-name{font-family:'Space Grotesk','Inter',sans-serif;font-weight:600;font-size:1.15rem;color:#f0f0f0;letter-spacing:-0.03em;line-height:1}
+.nav-logo-accent{width:20px;height:1px;background:#4ADE80}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:1.05rem;color:#888;transition:color 0.2s}
+.nav-links a:hover{color:#fff}
+.nav-right{display:flex;align-items:center;gap:0.75rem}
+.lang-btn{background:none;border:1px solid rgba(255,255,255,0.15);color:#888;padding:0.3rem 0.7rem;border-radius:6px;font-size:0.8rem;transition:all 0.2s}
+.lang-btn.active{color:#fff;border-color:rgba(255,255,255,0.4)}
+/* Animated pill button (LeftClick-inspired) */
+.pill-btn{display:inline-flex;align-items:center;gap:1rem;background:#fff;color:#0a0a0a;padding:0.3rem 0.35rem 0.3rem 1.2rem;border-radius:48px;font-size:0.85rem;font-weight:600;text-decoration:none;transition:0.5s cubic-bezier(0.65,0.05,0.36,1);border:none;cursor:pointer}
+.pill-btn .pill-text-wrap{display:flex;flex-direction:column;align-items:center;position:relative;overflow:hidden;height:1.2em;justify-content:center}
+.pill-btn .pill-text{transition:transform 0.5s cubic-bezier(0.65,0.05,0.36,1);line-height:1.2}
+.pill-btn .pill-text-hover{position:absolute;transform:translateY(100%);transition:transform 0.5s cubic-bezier(0.65,0.05,0.36,1);line-height:1.2}
+.pill-btn .pill-icon-box{width:2em;height:2em;border-radius:50%;background:#0a0a0a;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;flex-shrink:0}
+.pill-btn .pill-icon{width:0.85em;height:0.85em;transition:transform 0.5s cubic-bezier(0.65,0.05,0.36,1)}
+.pill-btn .pill-icon-hover{width:0.85em;height:0.85em;position:absolute;transform:translateX(-200%);transition:transform 0.5s cubic-bezier(0.65,0.05,0.36,1)}
+.pill-btn:hover .pill-text{transform:translateY(-100%)}
+.pill-btn:hover .pill-text-hover{transform:translateY(0)}
+.pill-btn:hover .pill-icon{transform:translateX(200%)}
+.pill-btn:hover .pill-icon-hover{transform:translateX(0)}
+/* Nav size — compact */
+.nav-cta.pill-btn{font-size:0.9rem;padding:0.25rem 0.3rem 0.25rem 1rem;gap:0.6rem}
+.nav-cta.pill-btn .pill-icon-box{width:1.7em;height:1.7em}
+.nav-cta.pill-btn .pill-icon,.nav-cta.pill-btn .pill-icon-hover{width:0.75em;height:0.75em}
+
+/* Mobile menu */
+.mobile-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,10,0.97);flex-direction:column;padding:1.5rem;gap:1rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+  .nav-links.open{display:flex}
+  .mobile-toggle{display:block}
+}
+
+/* ===================== SECTIONS ===================== */
+section{padding:6rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+
+/* ===================== HERO ===================== */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(120,90,255,0.1) 0%,rgba(74,222,128,0.05) 50%,transparent 70%);pointer-events:none}
+.hero-badge{display:inline-block;padding:0.4rem 1rem;border:1px solid rgba(255,255,255,0.12);border-radius:100px;font-size:0.8rem;color:#999;margin-bottom:2rem;letter-spacing:0.05em}
+.hero h1{font-size:clamp(3rem,7vw,5.5rem);font-weight:900;line-height:1.02;letter-spacing:-0.04em;color:#fff;margin-bottom:1.5rem}
+.hero h1 .accent{background:linear-gradient(135deg,#a78bfa,#6dd5ed,#4ADE80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;display:inline-block}
+.hero h1 .word-rotator{display:inline-grid;position:relative;overflow:hidden;vertical-align:bottom}
+.word-rotator .word{grid-area:1/1;white-space:nowrap;opacity:0;transform:translateY(100%);transition:all 0.6s cubic-bezier(0.65,0,0.35,1);background:linear-gradient(135deg,#a78bfa,#6dd5ed,#4ADE80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.word-rotator .word.active{opacity:1;transform:translateY(0)}
+.word-rotator .word.exit{opacity:0;transform:translateY(-100%)}
+.hero .subtitle{font-size:1.25rem;color:#888;max-width:600px;margin:0 auto 2.5rem;line-height:1.7}
+.hero-btns{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;align-items:center}
+.hero-proof{display:flex;align-items:center;justify-content:center;gap:1.2rem;font-size:0.75rem;color:#555;letter-spacing:0.06em;text-transform:uppercase}
+.hero-proof-label{color:#555;font-weight:400}
+.hero-proof-names{display:flex;align-items:center;gap:0.6rem}
+.hero-proof-name{color:#bbb;font-weight:600;font-size:0.8rem;letter-spacing:0.02em;text-transform:none}
+.hero-proof-dot{width:4px;height:4px;border-radius:50%;background:rgba(74,222,128,0.5)}
+/* Hero CTA — compact pill buttons */
+.hero-pill{display:inline-flex;align-items:center;gap:1rem;padding:0.3rem 0.35rem 0.3rem 1.2rem;border-radius:48px;font-size:0.85rem;font-weight:600;text-decoration:none;transition:0.5s cubic-bezier(0.65,0.05,0.36,1);border:none;cursor:pointer}
+.hero-pill .pill-text-wrap{display:flex;flex-direction:column;align-items:center;position:relative;overflow:hidden;height:1.2em;justify-content:center}
+.hero-pill .pill-text{transition:transform 0.5s cubic-bezier(0.65,0.05,0.36,1);line-height:1.2}
+.hero-pill .pill-text-hover{position:absolute;transform:translateY(100%);transition:transform 0.5s cubic-bezier(0.65,0.05,0.36,1);line-height:1.2}
+.hero-pill .pill-icon-box{width:2em;height:2em;border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;flex-shrink:0}
+.hero-pill .pill-icon,.hero-pill .pill-icon-hover{width:0.85em;height:0.85em;transition:transform 0.5s cubic-bezier(0.65,0.05,0.36,1)}
+.hero-pill .pill-icon-hover{position:absolute;transform:translateX(-200%)}
+.hero-pill:hover .pill-text{transform:translateY(-100%)}
+.hero-pill:hover .pill-text-hover{transform:translateY(0)}
+.hero-pill:hover .pill-icon{transform:translateX(200%)}
+.hero-pill:hover .pill-icon-hover{transform:translateX(0)}
+/* White variant (primary) */
+.hero-pill.white{background:#fff;color:#0a0a0a}
+.hero-pill.white .pill-icon-box{background:#0a0a0a}
+.hero-pill.white .pill-icon path,.hero-pill.white .pill-icon-hover path{stroke:#fff}
+/* Dark variant (secondary) */
+.hero-pill.dark{background:rgba(255,255,255,0.06);color:#ccc;border:1px solid rgba(255,255,255,0.1)}
+.hero-pill.dark .pill-icon-box{background:rgba(255,255,255,0.12)}
+.hero-pill.dark .pill-icon path,.hero-pill.dark .pill-icon-hover path{stroke:#fff}
+.hero-pill.dark:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2)}
+
+/* ===================== TRUST BAR ===================== */
+.trust-bar{padding:4rem 2rem 5rem;border-bottom:1px solid rgba(255,255,255,0.06);position:relative}
+.trust-bar::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(74,222,128,0.3),rgba(167,139,250,0.3),transparent)}
+.trust-header{text-align:left;margin-bottom:2.5rem}
+.trust-header .section-label{margin-bottom:0.5rem}
+.trust-stats{display:flex;justify-content:flex-start;gap:3rem;margin-bottom:2.5rem}
+.trust-stat{text-align:left}
+.trust-stat-value{font-size:2rem;font-weight:800;background:linear-gradient(135deg,#a78bfa,#4ADE80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2}
+.trust-stat-label{font-size:0.75rem;color:#666;text-transform:uppercase;letter-spacing:0.08em;margin-top:0.2rem}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:900px}
+.trust-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:2rem;position:relative;transition:border-color 0.3s}
+.trust-card:hover{border-color:rgba(74,222,128,0.2)}
+.trust-card .quote{font-size:1.1rem;color:#bbb;line-height:1.7;margin-bottom:1.2rem;font-style:italic}
+.trust-card .quote::before{content:'\201C';font-size:2.5rem;background:linear-gradient(135deg,rgba(167,139,250,0.6),rgba(74,222,128,0.5));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:absolute;top:0.8rem;left:1.2rem;line-height:1}
+.trust-card .author{font-weight:600;color:#fff;font-size:1rem}
+.trust-card .company{color:#888;font-size:0.9rem}
+@media(max-width:640px){.trust-grid{grid-template-columns:1fr}}
+
+/* ===================== LOGO BAR ===================== */
+.logo-bar{padding:3rem 2rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.logo-bar-inner{display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.logo-bar-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;color:#444;white-space:nowrap}
+.logo-bar-logos{display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap;justify-content:center}
+.logo-bar-item{display:flex;align-items:center;gap:0.4rem;color:#555;font-size:0.85rem;font-weight:600;opacity:0.5;transition:opacity 0.3s;letter-spacing:-0.01em}
+.logo-bar-item:hover{opacity:0.8}
+.logo-bar-item svg{width:20px;height:20px;flex-shrink:0}
+
+/* ===================== SERVICES ===================== */
+.services{background:#0a0a0a;position:relative;overflow:hidden}
+.services::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.services .svc-bg-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+.services .svc-bg-orb.a{width:350px;height:350px;background:rgba(167,139,250,0.08);top:-80px;right:-60px}
+.services .svc-bg-orb.b{width:280px;height:280px;background:rgba(74,222,128,0.06);bottom:10%;left:-80px}
+.services .svc-bg-orb.c{width:200px;height:200px;background:rgba(109,213,237,0.05);top:50%;right:20%}
+.services .container{position:relative;z-index:1}
+.section-label{display:inline-flex;align-items:center;gap:0.6rem;margin-bottom:1.2rem}
+.section-label .num{width:1.6rem;height:1.6rem;border-radius:50%;background:#fff;color:#0a0a0a;font-size:0.65rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.section-label .label-text{text-transform:uppercase;letter-spacing:0.12em;font-size:0.8rem;color:#888;background:rgba(255,255,255,0.06);padding:0.3rem 0.9rem;border-radius:100px;border:1px solid rgba(255,255,255,0.08)}
+.section-title{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;color:#fff;letter-spacing:-0.03em;margin-bottom:0.75rem;line-height:1.08}
+.section-subtitle{color:#888;font-size:1.15rem;max-width:600px;margin-bottom:3rem;line-height:1.7}
+.services-cats{display:flex;flex-direction:column;gap:3.5rem}
+.svc-cat{display:flex;gap:3rem;align-items:flex-start;position:relative;padding:2rem;border-radius:20px;transition:all 0.5s cubic-bezier(0.25,0.1,0.25,1)}
+.svc-cat-bg{position:absolute;inset:0;border-radius:20px;overflow:hidden;opacity:0;transition:opacity 0.6s cubic-bezier(0.25,0.1,0.25,1);pointer-events:none;z-index:0}
+.svc-cat-bg img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.35) saturate(0.5)}
+.svc-cat-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,0.4),rgba(10,10,10,0.15));pointer-events:none}
+.svc-cat:hover .svc-cat-bg{opacity:1}
+.svc-cat-left{flex:0 0 280px;position:relative;z-index:1}
+.svc-cat-num{font-size:0.7rem;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.5rem;transition:color 0.4s}
+.svc-cat-title{font-size:1.6rem;font-weight:800;color:#fff;letter-spacing:-0.02em;line-height:1.15;margin-bottom:0.6rem;transition:color 0.4s}
+.svc-cat-desc{font-size:0.92rem;color:#666;line-height:1.6;transition:color 0.4s}
+.svc-cat-right{flex:1;display:flex;flex-wrap:wrap;gap:0.6rem;align-items:flex-start;padding-top:0.3rem;position:relative;z-index:1}
+.svc-pill{display:inline-block;padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:500;color:#ccc;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);transition:all 0.3s;cursor:default;white-space:nowrap}
+.svc-pill:hover{background:rgba(167,139,250,0.1);border-color:rgba(167,139,250,0.3);color:#e0d4ff}
+.svc-pill.accent{background:linear-gradient(135deg,rgba(167,139,250,0.12),rgba(74,222,128,0.08));border-color:rgba(167,139,250,0.2);color:#d4ccf0}
+.svc-pill.accent:hover{background:linear-gradient(135deg,rgba(167,139,250,0.2),rgba(74,222,128,0.14));border-color:rgba(167,139,250,0.4);color:#fff}
+.services-cats:hover .svc-cat:not(:hover){opacity:0.35}
+.services-cats:hover .svc-cat:not(:hover) .svc-cat-title{color:#666}
+.services-cats:hover .svc-cat:not(:hover) .svc-pill{opacity:0.5}
+.svc-cat:hover .svc-cat-title{color:#fff}
+.svc-cat:hover .svc-cat-num{color:#999}
+.svc-cat:hover .svc-cat-desc{color:#999}
+.svc-divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)}
+@media(max-width:768px){.svc-cat{flex-direction:column;gap:1.2rem;padding:1.5rem}.svc-cat-left{flex:none}.svc-cat-bg{display:none}}
+
+/* ===================== APPS WE WORK WITH ===================== */
+.apps-section{background:rgba(255,255,255,0.02);padding:5rem 2rem}
+.apps-section .section-title{text-align:left}
+.apps-section .section-subtitle{text-align:left;margin:0 0 3rem;max-width:500px}
+.apps-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;max-width:900px;margin:0 auto}
+.app-item{display:flex;flex-direction:column;align-items:center;gap:0.6rem;width:90px}
+.app-icon{width:56px;height:56px;border-radius:14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;transition:all 0.3s}
+.app-icon:hover{border-color:rgba(74,222,128,0.25);transform:translateY(-2px);background:rgba(255,255,255,0.08)}
+.app-icon img,.app-icon svg{width:28px;height:28px}
+.app-name{font-size:0.8rem;color:#888;text-align:center;font-weight:500;letter-spacing:0.02em}
+@media(max-width:480px){.apps-grid{gap:1.2rem}.app-item{width:72px}}
+
+/* ===================== HOW IT WORKS ===================== */
+.how-it-works{background:rgba(255,255,255,0.02)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+.step{text-align:center;position:relative}
+.step-number{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,rgba(167,139,250,0.12),rgba(74,222,128,0.1));border:1px solid rgba(167,139,250,0.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:800;background-clip:padding-box;color:#4ADE80;margin:0 auto 1.2rem}
+.step h3{font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.step p{font-size:1.05rem;color:#999;line-height:1.7;max-width:300px;margin:0 auto}
+.step-connector{display:none}
+@media(min-width:769px){
+  .step-connector{display:block;position:absolute;top:28px;left:calc(50% + 36px);width:calc(100% - 72px);height:1px;background:linear-gradient(90deg,rgba(167,139,250,0.3),rgba(74,222,128,0.15),rgba(74,222,128,0.03))}
+  .step:last-child .step-connector{display:none}
+}
+@media(max-width:768px){.steps{grid-template-columns:1fr;gap:2.5rem}}
+
+/* ===================== CASE STUDIES ===================== */
+.case-studies{background:#0a0a0a}
+.cases-grid{display:grid;grid-template-columns:1fr;gap:2rem}
+.case-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:20px;overflow:hidden;transition:all 0.3s;display:grid;grid-template-columns:380px 1fr}
+.case-card:hover{border-color:rgba(74,222,128,0.25);transform:translateY(-3px)}
+.case-visual{min-height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.case-visual.v1{background:linear-gradient(135deg,#1a1035 0%,#0f1a2e 50%,#0a1a1a 100%)}
+.case-visual.v2{background:linear-gradient(135deg,#0a1a1a 0%,#0f1a2e 50%,#1a1035 100%)}
+.case-visual svg{position:absolute;width:100%;height:100%}
+.case-visual .case-orb{position:absolute;border-radius:50%;filter:blur(40px);opacity:0.5;animation:orbFloat 6s ease-in-out infinite}
+.case-visual .case-orb.o1{width:120px;height:120px;background:rgba(167,139,250,0.4);top:-20px;right:20%;animation-delay:0s}
+.case-visual .case-orb.o2{width:80px;height:80px;background:rgba(74,222,128,0.35);bottom:-10px;left:25%;animation-delay:-2s}
+.case-visual .case-orb.o3{width:60px;height:60px;background:rgba(109,213,237,0.3);top:30%;left:10%;animation-delay:-4s}
+@keyframes orbFloat{0%,100%{transform:translate(0,0)}25%{transform:translate(8px,-6px)}50%{transform:translate(-4px,10px)}75%{transform:translate(6px,4px)}}
+.case-visual .case-badge{position:absolute;bottom:16px;left:16px;display:flex;align-items:center;gap:0.4rem;padding:0.3rem 0.8rem 0.3rem 0.4rem;border-radius:100px;background:rgba(0,0,0,0.5);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.1);font-size:0.7rem;font-weight:600;color:#ccc;letter-spacing:0.03em}
+.case-visual .case-badge svg{width:14px;height:14px;flex-shrink:0}
+.case-body{padding:2rem 2.5rem 2.5rem}
+.case-industry{text-transform:uppercase;letter-spacing:0.12em;font-size:0.7rem;color:#888;margin-bottom:0.6rem}
+.case-card h3{font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:0.8rem}
+.case-card .case-desc{font-size:1.05rem;color:#999;line-height:1.7;margin-bottom:1.5rem}
+.case-metrics{display:flex;gap:2rem;flex-wrap:wrap}
+.metric{display:flex;flex-direction:column}
+.metric .value{font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,#a78bfa,#4ADE80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.metric .label{font-size:0.85rem;color:#888;margin-top:0.15rem}
+@media(max-width:768px){.cases-grid{grid-template-columns:1fr}.case-card{grid-template-columns:1fr}.case-visual{min-height:200px}}
+
+/* ===================== ABOUT ===================== */
+.about{background:rgba(255,255,255,0.02)}
+.about-inner{display:grid;grid-template-columns:320px 1fr;gap:3rem;align-items:stretch;max-width:900px}
+.about-photo{border-radius:20px;background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(74,222,128,0.12));border:1px solid rgba(255,255,255,0.1);overflow:hidden;min-height:380px}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.about-text{display:flex;flex-direction:column;justify-content:center}
+.about-text h2{font-size:2.1rem;font-weight:800;color:#fff;margin-bottom:0.2rem;letter-spacing:-0.02em}
+.about-role{font-size:1rem;color:#4ADE80;font-weight:500;margin-bottom:1.2rem;letter-spacing:0.02em}
+.about-text p{font-size:1.1rem;color:#bbb;line-height:1.8;margin-bottom:1rem}
+.about-links{display:flex;gap:1rem;margin-top:0.8rem}
+.about-links a{display:inline-flex;align-items:center;gap:0.4rem;color:#4ADE80;font-size:1rem;font-weight:500;transition:opacity 0.2s;text-decoration:none}
+.about-links a:hover{opacity:0.7}
+.about-links a svg{width:18px;height:18px}
+@media(max-width:640px){.about-inner{grid-template-columns:1fr;text-align:center;justify-items:center}.about-photo{min-height:300px;max-width:320px;width:100%}}
+
+/* ===================== FAQ ===================== */
+.faq{background:#0a0a0a}
+.faq-list{max-width:750px;display:flex;flex-direction:column;gap:0.75rem}
+.faq-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:border-color 0.3s}
+.faq-item.open{border-color:rgba(74,222,128,0.25)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;cursor:pointer;gap:1rem;-webkit-user-select:none;user-select:none}
+.faq-q h3{font-size:1.15rem;font-weight:600;color:#fff;margin:0;line-height:1.4}
+.faq-q .faq-icon{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,rgba(167,139,250,0.1),rgba(74,222,128,0.08));border:1px solid rgba(167,139,250,0.12);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#4ADE80;transition:transform 0.3s}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.35s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-inner{padding:0 1.5rem 1.3rem;font-size:1.05rem;color:#999;line-height:1.7}
+
+/* ===================== CONTACT ===================== */
+.contact{background:#0a0a0a}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact-left h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:900;color:#fff;letter-spacing:-0.03em;margin-bottom:1rem;line-height:1.1}
+.contact-left p{color:#888;font-size:1rem;line-height:1.7;margin-bottom:2rem}
+.calendly-cta{display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,#a78bfa,#4ADE80);color:#fff;padding:1rem 2.2rem;border-radius:10px;font-weight:600;font-size:1.1rem;border:none;transition:all 0.2s}
+.calendly-cta:hover{opacity:0.85;transform:translateY(-1px)}
+.or-text{color:#666;font-size:0.85rem;margin:1.5rem 0}
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.contact-form input,.contact-form select,.contact-form textarea{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:0.95rem 1.1rem;color:#fff;font-size:1rem;font-family:inherit;transition:border-color 0.2s;outline:none}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:rgba(74,222,128,0.4)}
+.contact-form textarea{min-height:100px;resize:vertical}
+.contact-form select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+.contact-form select option{background:#1a1a1a;color:#fff}
+.form-submit{background:#fff;color:#0a0a0a;padding:0.95rem 2rem;border-radius:10px;font-weight:600;font-size:1.05rem;border:none;cursor:pointer;transition:all 0.2s}
+.form-submit:hover{opacity:0.85}
+.trust-mini{display:flex;align-items:center;gap:0.6rem;margin-top:1.5rem}
+.trust-mini .quote-mini{font-size:0.85rem;color:#888;font-style:italic;line-height:1.5}
+.trust-mini .quote-mini strong{color:#bbb;font-weight:600}
+@media(max-width:768px){.contact-inner{grid-template-columns:1fr}}
+
+/* ===================== FOOTER CTA ===================== */
+.footer-cta{padding:6rem 2rem 5rem;text-align:left;position:relative;overflow:hidden;background:#0a0a0a}
+.footer-cta-logo{display:block;width:clamp(280px,35vw,450px);height:auto;margin:4rem 0 0;opacity:0.15}
+.footer-cta-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:#555;margin-bottom:1rem}
+.footer-cta h2{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#fff;letter-spacing:-0.03em;margin-bottom:1rem;line-height:1.08}
+.footer-cta p{color:#666;font-size:1.05rem;margin-bottom:2rem;max-width:500px}
+
+/* ===================== FOOTER ===================== */
+.footer{padding:2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;font-size:0.9rem;color:#666}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:#888;transition:color 0.2s}
+.footer-links a:hover{color:#fff}
+
+/* ===================== ANIMATIONS ===================== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.vis{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:0.1s}
+.reveal-d2{transition-delay:0.2s}
+.reveal-d3{transition-delay:0.3s}
+
+/* Hero entrance */
+@keyframes heroFadeIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes wordReveal{from{opacity:0;transform:translateY(12px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+.hero-badge{animation:heroFadeIn 0.8s ease 0.2s both}
+.hero h1{animation:heroFadeIn 0.8s ease 0.4s both}
+.hero h1 .accent{display:inline-block;animation:heroFadeIn 0.8s ease 0.9s both}
+.hero .subtitle{animation:heroFadeIn 0.8s ease 0.6s both}
+.hero-btns{animation:heroFadeIn 0.8s ease 0.8s both}
+.hero-proof{animation:heroFadeIn 0.8s ease 1s both}
+
+/* Counter animation */
+.metric .value{transition:opacity 0.3s}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <svg class="nav-logo-mark" viewBox="0 0 50 50" fill="none">
+      <rect width="50" height="50" rx="12" fill="#161616" stroke="#2A2A2A" stroke-width="1"/>
+      <rect x="14" y="12" width="4.5" height="26" rx="2" fill="#EDEDED"/>
+      <path d="M18.5 12 H28 C33 12 36 15.5 36 19.5 C36 23.5 33 27 28 27 H18.5" stroke="#EDEDED" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+      <line x1="26" y1="25" x2="36" y2="38" stroke="#EDEDED" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="37" cy="12" r="3" fill="#4ADE80"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">relay labs</span>
+      <div class="nav-logo-accent"></div>
+    </div>
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="#services" class="en">Services</a>
+    <a href="#services" class="fr">Services</a>
+    <a href="#work" class="en">Work</a>
+    <a href="#work" class="fr">Projets</a>
+    <a href="#about" class="en">About</a>
+    <a href="#about" class="fr">&Agrave; propos</a>
+    <a href="#faq" class="en">FAQ</a>
+    <a href="#faq" class="fr">FAQ</a>
+    <a href="#contact" class="en">Contact</a>
+    <a href="#contact" class="fr">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-btn active" data-set-lang="en">EN</button>
+    <button class="lang-btn" data-set-lang="fr">FR</button>
+    <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="nav-cta pill-btn en">
+      <div class="pill-text-wrap"><span class="pill-text">Let's talk</span><span class="pill-text-hover">Let's talk</span></div>
+      <div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </a>
+    <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="nav-cta pill-btn fr">
+      <div class="pill-text-wrap"><span class="pill-text">Discutons</span><span class="pill-text-hover">Discutons</span></div>
+      <div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </a>
+    <button class="mobile-toggle" id="mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="container" style="max-width:750px">
+    <div class="en">
+      <span class="hero-badge">AI + Automation Agency</span>
+      <h1>From cold lead to closed deal —<br><span class="accent"><span class="word-rotator" data-words='["automated.","on autopilot.","handled by AI.","running 24/7."]'><span class="word active">automated.</span></span></span></h1>
+      <p class="subtitle">AI automations, lead gen systems, and voice agents — so you can scale without the overhead.</p>
+      <div class="hero-btns">
+        <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white"><div class="pill-text-wrap"><span class="pill-text">Let's Talk</span><span class="pill-text-hover">Let's Talk</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+        <a href="#services" class="hero-pill dark"><div class="pill-text-wrap"><span class="pill-text">Explore Services</span><span class="pill-text-hover">Explore Services</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+      </div>
+      <div class="hero-proof">
+        <span class="hero-proof-label">Trusted by</span>
+        <div class="hero-proof-names">
+          <span class="hero-proof-name">NeedCollab</span>
+          <span class="hero-proof-dot"></span>
+          <span class="hero-proof-name">Coaching with Irfann</span>
+        </div>
+      </div>
+    </div>
+    <div class="fr">
+      <span class="hero-badge">Agence IA + Automatisation</span>
+      <h1>Du lead froid au contrat sign&eacute; —<br><span class="accent"><span class="word-rotator" data-words='["automatis&eacute;.","en pilote automatique.","g&eacute;r&eacute; par l\u0027IA.","actif 24h/24."]'><span class="word active">automatis&eacute;.</span></span></span></h1>
+      <p class="subtitle">Automatisations IA, g&eacute;n&eacute;ration de leads et agents vocaux — pour grandir sans surcharge.</p>
+      <div class="hero-btns">
+        <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white"><div class="pill-text-wrap"><span class="pill-text">Discutons</span><span class="pill-text-hover">Discutons</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+        <a href="#services" class="hero-pill dark"><div class="pill-text-wrap"><span class="pill-text">D&eacute;couvrir nos services</span><span class="pill-text-hover">D&eacute;couvrir nos services</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+      </div>
+      <div class="hero-proof">
+        <span class="hero-proof-label">Ils nous font confiance</span>
+        <div class="hero-proof-names">
+          <span class="hero-proof-name">NeedCollab</span>
+          <span class="hero-proof-dot"></span>
+          <span class="hero-proof-name">Coaching with Irfann</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TRUST BAR ==================== -->
+<section class="trust-bar">
+  <div class="container">
+  <div class="trust-header">
+    <div class="section-label en"><span class="num">1</span><span class="label-text">What our clients say</span></div>
+    <div class="section-label fr"><span class="num">1</span><span class="label-text">Ce que nos clients disent</span></div>
+  </div>
+  <div class="trust-stats reveal">
+    <div class="trust-stat">
+      <div class="trust-stat-value">3x</div>
+      <div class="trust-stat-label en">More leads</div>
+      <div class="trust-stat-label fr">Plus de leads</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-stat-value">&lt;3min</div>
+      <div class="trust-stat-label en">Response time</div>
+      <div class="trust-stat-label fr">Temps de r&eacute;ponse</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-stat-value">20%+</div>
+      <div class="trust-stat-label en">Close rate</div>
+      <div class="trust-stat-label fr">Taux de conversion</div>
+    </div>
+  </div>
+  <div class="trust-grid">
+    <!-- Testimonial 1 -->
+    <div class="trust-card reveal">
+      <div class="en">
+        <p class="quote" style="padding-left:1.5rem">Response time went from 6-8 hours to under 3 minutes. Leads tripled. Close rate jumped from 11% to 20%+. Abdel delivers real results.</p>
+        <p class="author">Irfann</p>
+        <p class="company">Coaching with Irfann</p>
+      </div>
+      <div class="fr">
+        <p class="quote" style="padding-left:1.5rem">Temps de r&eacute;ponse : de 6-8h &agrave; moins de 3 min. Leads tripl&eacute;s. Taux de conversion : de 11% &agrave; 20%+. Abdel livre de vrais r&eacute;sultats.</p>
+        <p class="author">Irfann</p>
+        <p class="company">Coaching with Irfann</p>
+      </div>
+    </div>
+    <!-- Testimonial 2 -->
+    <div class="trust-card reveal reveal-d1">
+      <div class="en">
+        <p class="quote" style="padding-left:1.5rem">He didn't just set up tools — he built a structured acquisition system. Our pipeline is now organized, automated, and predictable.</p>
+        <p class="author">NeedCollab</p>
+        <p class="company">Digital Agency</p>
+      </div>
+      <div class="fr">
+        <p class="quote" style="padding-left:1.5rem">Il n'a pas juste configur&eacute; des outils — il a construit un syst&egrave;me d'acquisition structur&eacute;. Notre pipeline est organis&eacute;, automatis&eacute; et pr&eacute;visible.</p>
+        <p class="author">NeedCollab</p>
+        <p class="company">Agence digitale</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ==================== LOGO BAR ==================== -->
+<section class="logo-bar">
+  <div class="logo-bar-inner">
+    <span class="logo-bar-label en">Powered by</span>
+    <span class="logo-bar-label fr">Propuls&eacute; par</span>
+    <div class="logo-bar-logos">
+      <div class="logo-bar-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.942 7.885c-.16-.38-.458-.593-.846-.593h-2.64l-2.31-5.46c-.175-.385-.487-.582-.87-.582h-.01c-.386.003-.697.203-.87.59L10.1 7.292H5.904c-.388 0-.7.213-.86.593-.157.374-.078.73.218 1.028l3.87 3.894-1.58 5.664c-.117.388.013.74.358.96.17.11.358.165.546.165.19 0 .38-.06.555-.18l4.992-3.585 4.99 3.586c.174.12.364.18.554.18.187 0 .376-.056.546-.166.345-.22.474-.57.358-.96l-1.58-5.663 3.87-3.894c.296-.3.375-.654.22-1.03z"/></svg>Make</div>
+      <div class="logo-bar-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg>OpenAI</div>
+      <div class="logo-bar-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>Google</div>
+      <div class="logo-bar-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.469 13.795c-.456 0-.86.2-1.14.523l-3.483-1.894a2.21 2.21 0 0 0 .062-.485c0-.164-.023-.328-.062-.485l3.483-1.894a1.502 1.502 0 1 0-.633-1.217c0 .164.023.328.062.485l-3.483 1.894a1.502 1.502 0 1 0 0 2.434l3.483 1.894c-.04.157-.062.321-.062.485a1.502 1.502 0 1 0 1.773-1.34zM6.531 10.795a1.502 1.502 0 1 0 0 2.41 1.502 1.502 0 0 0 0-2.41z"/></svg>n8n</div>
+      <div class="logo-bar-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.8a7.2 7.2 0 1 1 0 14.4 7.2 7.2 0 0 1 0-14.4z"/></svg>Twilio</div>
+      <div class="logo-bar-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.52 0L0 6.72v10.56L4.8 20.16v-10.2L11.52 6v14.88l4.8 2.88V2.88L11.52 0zM19.2 3.84v10.2L24 11.16V0.6L19.2 3.84z"/></svg>Airtable</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="services" id="services">
+  <div class="svc-bg-orb a"></div>
+  <div class="svc-bg-orb b"></div>
+  <div class="svc-bg-orb c"></div>
+  <div class="container">
+    <div class="en">
+      <div class="section-label reveal"><span class="num">2</span><span class="label-text">What We Specialize In</span></div>
+      <h2 class="section-title reveal">Three systems.<br>One growth engine.</h2>
+      <p class="section-subtitle reveal">We don't do everything. We do three things exceptionally well — powered by Make.com, n8n, and AI.</p>
+    </div>
+    <div class="fr">
+      <div class="section-label reveal"><span class="num">2</span><span class="label-text">Nos sp&eacute;cialit&eacute;s</span></div>
+      <h2 class="section-title reveal">Trois syst&egrave;mes.<br>Un moteur de croissance.</h2>
+      <p class="section-subtitle reveal">On ne fait pas tout. On fait trois choses exceptionnellement bien — propuls&eacute;es par Make.com, n8n et l'IA.</p>
+    </div>
+
+    <div class="services-cats">
+      <!-- Category 1: AI Automations -->
+      <div class="svc-cat reveal">
+        <div class="svc-cat-bg">
+          <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=900&h=400&fit=crop&crop=center" alt="" loading="lazy"/>
+        </div>
+        <div class="svc-cat-left">
+          <div class="en">
+            <div class="svc-cat-num">01</div>
+            <h3 class="svc-cat-title">AI-Powered Automations</h3>
+            <p class="svc-cat-desc">We plug AI into your existing workflows so documents get processed, decisions get made, and your team focuses on what matters.</p>
+          </div>
+          <div class="fr">
+            <div class="svc-cat-num">01</div>
+            <h3 class="svc-cat-title">Automatisations IA</h3>
+            <p class="svc-cat-desc">On int&egrave;gre l'IA dans vos workflows pour que vos documents se traitent, vos d&eacute;cisions se prennent, et votre &eacute;quipe se concentre sur l'essentiel.</p>
+          </div>
+        </div>
+        <div class="svc-cat-right">
+          <div class="en">
+            <span class="svc-pill accent">Auto-Generate Invoices &amp; Contracts</span>
+            <span class="svc-pill">AI Email Sorting &amp; Replies</span>
+            <span class="svc-pill">Pull Data from PDFs &amp; Forms</span>
+            <span class="svc-pill accent">Connect Your Apps (No Code)</span>
+            <span class="svc-pill">Auto-Update CRM from Emails</span>
+            <span class="svc-pill">Slack / Teams Alerts on Key Events</span>
+            <span class="svc-pill accent">Approval Workflows with AI</span>
+            <span class="svc-pill">Auto-Organize Google Drive &amp; Dropbox</span>
+          </div>
+          <div class="fr">
+            <span class="svc-pill accent">G&eacute;n&eacute;ration auto de factures &amp; contrats</span>
+            <span class="svc-pill">Tri &amp; r&eacute;ponses de courriels par IA</span>
+            <span class="svc-pill">Extraction de donn&eacute;es depuis PDFs</span>
+            <span class="svc-pill accent">Connecter vos apps (sans code)</span>
+            <span class="svc-pill">Mise &agrave; jour auto du CRM</span>
+            <span class="svc-pill">Alertes Slack / Teams en temps r&eacute;el</span>
+            <span class="svc-pill accent">Workflows d'approbation IA</span>
+            <span class="svc-pill">Organisation auto Google Drive &amp; Dropbox</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-divider"></div>
+
+      <!-- Category 2: Lead Gen + CRM -->
+      <div class="svc-cat reveal">
+        <div class="svc-cat-bg">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&h=400&fit=crop&crop=center" alt="" loading="lazy"/>
+        </div>
+        <div class="svc-cat-left">
+          <div class="en">
+            <div class="svc-cat-num">02</div>
+            <h3 class="svc-cat-title">Lead Gen + CRM</h3>
+            <p class="svc-cat-desc">From cold email to closed deal: we build the pipeline that finds, qualifies, and nurtures your leads automatically.</p>
+          </div>
+          <div class="fr">
+            <div class="svc-cat-num">02</div>
+            <h3 class="svc-cat-title">G&eacute;n&eacute;ration de leads + CRM</h3>
+            <p class="svc-cat-desc">Du courriel froid au contrat sign&eacute; : on b&acirc;tit le pipeline qui trouve, qualifie et nourrit vos leads automatiquement.</p>
+          </div>
+        </div>
+        <div class="svc-cat-right">
+          <div class="en">
+            <span class="svc-pill accent">AI-Written Cold Emails That Convert</span>
+            <span class="svc-pill">Auto-Score &amp; Rank Your Leads</span>
+            <span class="svc-pill">Move Deals Through Your Pipeline Automatically</span>
+            <span class="svc-pill accent">Smart Follow-Ups (Email + SMS + LinkedIn)</span>
+            <span class="svc-pill">Instant Appointment Booking</span>
+            <span class="svc-pill">Enrich Contacts with AI Research</span>
+            <span class="svc-pill accent">Outreach Across Email, LinkedIn &amp; Ads</span>
+          </div>
+          <div class="fr">
+            <span class="svc-pill accent">Cold emails r&eacute;dig&eacute;s par IA qui convertissent</span>
+            <span class="svc-pill">Scoring automatique de vos leads</span>
+            <span class="svc-pill">Avancement auto des deals dans le pipeline</span>
+            <span class="svc-pill accent">Relances intelligentes (Email + SMS + LinkedIn)</span>
+            <span class="svc-pill">Prise de rendez-vous instantan&eacute;e</span>
+            <span class="svc-pill">Enrichissement de contacts par recherche IA</span>
+            <span class="svc-pill accent">Prospection multi-canal (Email, LinkedIn &amp; Ads)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-divider"></div>
+
+      <!-- Category 3: AI Agents & Customer Service -->
+      <div class="svc-cat reveal">
+        <div class="svc-cat-bg">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&h=400&fit=crop&crop=center" alt="" loading="lazy"/>
+        </div>
+        <div class="svc-cat-left">
+          <div class="en">
+            <div class="svc-cat-num">03</div>
+            <h3 class="svc-cat-title">AI Agents &amp; Customer Service</h3>
+            <p class="svc-cat-desc">AI-powered support that handles calls, answers questions, books appointments, and qualifies leads 24/7. Your support never sleeps.</p>
+          </div>
+          <div class="fr">
+            <div class="svc-cat-num">03</div>
+            <h3 class="svc-cat-title">Agents IA &amp; Service client</h3>
+            <p class="svc-cat-desc">Un service client propuls&eacute; par l'IA qui g&egrave;re les appels, r&eacute;pond aux questions et qualifie vos leads 24h/24. Votre support ne dort jamais.</p>
+          </div>
+        </div>
+        <div class="svc-cat-right">
+          <div class="en">
+            <span class="svc-pill accent">AI That Picks Up Your Calls</span>
+            <span class="svc-pill">Website Chatbot That Actually Helps</span>
+            <span class="svc-pill">Answer Customer Questions 24/7</span>
+            <span class="svc-pill accent">Route Calls to the Right Person Instantly</span>
+            <span class="svc-pill">AI That Books Appointments for You</span>
+            <span class="svc-pill">Qualify Leads Before They Reach Your Team</span>
+            <span class="svc-pill accent">Support in English, French &amp; Spanish</span>
+            <span class="svc-pill">Turn Missed Calls into Booked Meetings</span>
+          </div>
+          <div class="fr">
+            <span class="svc-pill accent">Une IA qui r&eacute;pond &agrave; vos appels</span>
+            <span class="svc-pill">Chatbot web qui aide vraiment</span>
+            <span class="svc-pill">R&eacute;pondre aux clients 24h/24</span>
+            <span class="svc-pill accent">Routage d'appels intelligent</span>
+            <span class="svc-pill">IA qui prend vos rendez-vous</span>
+            <span class="svc-pill">Qualifier les leads avant votre &eacute;quipe</span>
+            <span class="svc-pill accent">Support en fran&ccedil;ais, anglais &amp; espagnol</span>
+            <span class="svc-pill">Transformer les appels manqu&eacute;s en meetings</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mid-page CTA -->
+<div class="mid-cta reveal" style="text-align:center;padding:3rem 2rem">
+  <p class="en" style="color:#888;margin-bottom:1rem;font-size:1rem">Ready to automate?</p>
+  <p class="fr" style="color:#888;margin-bottom:1rem;font-size:1rem">Pr&ecirc;t &agrave; automatiser ?</p>
+  <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white"><div class="pill-text-wrap"><span class="pill-text">Let's Talk</span><span class="pill-text-hover">Let's Talk</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+</div>
+
+<!-- ==================== APPS WE WORK WITH ==================== -->
+<section class="apps-section">
+  <div class="container">
+    <div class="en">
+      <h2 class="section-title reveal">Your apps. Our automations.</h2>
+      <p class="section-subtitle reveal">Plug in your tools — we wire them together and handle the rest.</p>
+    </div>
+    <div class="fr">
+      <h2 class="section-title reveal">Vos apps. Nos automatisations.</h2>
+      <p class="section-subtitle reveal">Branchez vos outils — on les connecte et on g&egrave;re le reste.</p>
+    </div>
+
+    <div class="apps-grid reveal">
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/make.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Make"></div>
+        <span class="app-name">Make</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/salesforce.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Salesforce"></div>
+        <span class="app-name">Salesforce</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/slack.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Slack"></div>
+        <span class="app-name">Slack</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/calendar.google.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Google Calendar"></div>
+        <span class="app-name">Google Calendar</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/sheets.google.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Google Sheets"></div>
+        <span class="app-name">Google Sheets</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/airtable.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Airtable"></div>
+        <span class="app-name">Airtable</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/openai.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="OpenAI"></div>
+        <span class="app-name">OpenAI</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/calendly.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Calendly"></div>
+        <span class="app-name">Calendly</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/twilio.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Twilio"></div>
+        <span class="app-name">Twilio</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/hubspot.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="HubSpot"></div>
+        <span class="app-name">HubSpot</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/clickup.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="ClickUp"></div>
+        <span class="app-name">ClickUp</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/gohighlevel.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="GoHighLevel"></div>
+        <span class="app-name">GoHighLevel</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/gmail.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Gmail"></div>
+        <span class="app-name">Gmail</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/outlook.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Outlook"></div>
+        <span class="app-name">Outlook</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/stripe.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Stripe"></div>
+        <span class="app-name">Stripe</span>
+      </div>
+      <div class="app-item">
+        <div class="app-icon"><img src="https://img.logo.dev/pandadoc.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="PandaDoc"></div>
+        <span class="app-name">PandaDoc</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section class="how-it-works" id="process">
+  <div class="container">
+    <div class="en">
+      <div class="section-label reveal"><span class="num">3</span><span class="label-text">How It Works</span></div>
+      <h2 class="section-title reveal">Simple process.<br>Serious results.</h2>
+    </div>
+    <div class="fr">
+      <div class="section-label reveal"><span class="num">3</span><span class="label-text">Comment &ccedil;a marche</span></div>
+      <h2 class="section-title reveal">Processus simple.<br>R&eacute;sultats s&eacute;rieux.</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-connector"></div>
+        <div class="step-number">1</div>
+        <div class="en">
+          <h3>Audit &amp; Strategy</h3>
+          <p>Free 30-min call. We audit your current processes, identify what's costing you time and money, and map the top 3 automation opportunities. You get a free recorded Loom audit of your current stack.</p>
+        </div>
+        <div class="fr">
+          <h3>Audit &amp; strat&eacute;gie</h3>
+          <p>Appel gratuit de 30 min. On audite vos processus actuels, identifie ce qui vous co&ucirc;te du temps et de l'argent, et cible les 3 meilleures opportunit&eacute;s. Vous recevez un audit vid&eacute;o Loom gratuit de votre stack actuel.</p>
+        </div>
+      </div>
+      <div class="step reveal reveal-d1">
+        <div class="step-connector"></div>
+        <div class="step-number">2</div>
+        <div class="en">
+          <h3>Build in 2-4 Weeks</h3>
+          <p>We build your system on Make.com or n8n, wire up AI where it matters, and test every scenario before anything goes live. Weekly progress updates + a test environment you can try yourself.</p>
+        </div>
+        <div class="fr">
+          <h3>Construction en 2-4 semaines</h3>
+          <p>On construit votre syst&egrave;me sur Make.com ou n8n, on int&egrave;gre l'IA l&agrave; o&ugrave; &ccedil;a compte, et on teste chaque sc&eacute;nario avant la mise en ligne. Mises &agrave; jour hebdomadaires + un environnement de test que vous pouvez essayer.</p>
+        </div>
+      </div>
+      <div class="step reveal reveal-d2">
+        <div class="step-number">3</div>
+        <div class="en">
+          <h3>Launch &amp; Grow</h3>
+          <p>We deploy, train your team with a video walkthrough, and stay on for 30 days of free support. Most clients see ROI in the first month.</p>
+        </div>
+        <div class="fr">
+          <h3>Lancement &amp; croissance</h3>
+          <p>On d&eacute;ploie, forme votre &eacute;quipe avec un walkthrough vid&eacute;o, et reste disponible pour 30 jours de support gratuit. La plupart des clients voient un ROI d&egrave;s le premier mois.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CASE STUDIES ==================== -->
+<section class="case-studies" id="work">
+  <div class="container">
+    <div class="en">
+      <div class="section-label reveal"><span class="num">4</span><span class="label-text">Case Studies</span></div>
+      <h2 class="section-title reveal">Real clients.<br>Real results.</h2>
+      <p class="section-subtitle reveal">Here's what happens when automation meets a real business.</p>
+    </div>
+    <div class="fr">
+      <div class="section-label reveal"><span class="num">4</span><span class="label-text">&Eacute;tudes de cas</span></div>
+      <h2 class="section-title reveal">Vrais clients.<br>Vrais r&eacute;sultats.</h2>
+      <p class="section-subtitle reveal">Voici ce qui se passe quand l'automatisation rencontre une vraie entreprise.</p>
+    </div>
+
+    <div class="cases-grid">
+      <!-- Case Study 1: NeedCollab -->
+      <div class="case-card reveal">
+        <div class="case-visual v1">
+          <svg viewBox="0 0 500 220" fill="none">
+            <!-- GHL-style CRM pipeline / automation visual -->
+            <!-- Background grid -->
+            <rect width="500" height="220" rx="0" fill="rgba(255,255,255,0.01)"/>
+            <line x1="0" y1="55" x2="500" y2="55" stroke="rgba(255,255,255,0.03)"/>
+            <line x1="0" y1="110" x2="500" y2="110" stroke="rgba(255,255,255,0.03)"/>
+            <line x1="0" y1="165" x2="500" y2="165" stroke="rgba(255,255,255,0.03)"/>
+            <!-- Pipeline columns (Kanban-style like GHL) -->
+            <rect x="18" y="14" width="105" height="195" rx="8" fill="rgba(167,139,250,0.06)" stroke="rgba(167,139,250,0.15)" stroke-width="1"/>
+            <text x="70" y="33" fill="rgba(167,139,250,0.6)" font-size="8" font-family="sans-serif" text-anchor="middle" font-weight="600">New Leads</text>
+            <text x="70" y="44" fill="rgba(167,139,250,0.35)" font-size="7" font-family="sans-serif" text-anchor="middle">12</text>
+            <!-- Lead cards in col 1 -->
+            <rect x="26" y="52" width="89" height="28" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+            <circle cx="38" cy="66" r="5" fill="rgba(167,139,250,0.3)"/><text x="48" y="63" fill="rgba(255,255,255,0.35)" font-size="6.5" font-family="sans-serif">Sarah M.</text><text x="48" y="73" fill="rgba(255,255,255,0.18)" font-size="5.5" font-family="sans-serif">Inbound · 2h ago</text>
+            <rect x="26" y="84" width="89" height="28" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+            <circle cx="38" cy="98" r="5" fill="rgba(109,213,237,0.3)"/><text x="48" y="95" fill="rgba(255,255,255,0.35)" font-size="6.5" font-family="sans-serif">James T.</text><text x="48" y="105" fill="rgba(255,255,255,0.18)" font-size="5.5" font-family="sans-serif">Cold email · 5h</text>
+            <rect x="26" y="116" width="89" height="28" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+            <circle cx="38" cy="130" r="5" fill="rgba(74,222,128,0.3)"/><text x="48" y="127" fill="rgba(255,255,255,0.35)" font-size="6.5" font-family="sans-serif">Lina K.</text><text x="48" y="137" fill="rgba(255,255,255,0.18)" font-size="5.5" font-family="sans-serif">Website · 1d</text>
+
+            <!-- Col 2: Contacted -->
+            <rect x="135" y="14" width="105" height="195" rx="8" fill="rgba(109,213,237,0.05)" stroke="rgba(109,213,237,0.12)" stroke-width="1"/>
+            <text x="187" y="33" fill="rgba(109,213,237,0.55)" font-size="8" font-family="sans-serif" text-anchor="middle" font-weight="600">Contacted</text>
+            <text x="187" y="44" fill="rgba(109,213,237,0.3)" font-size="7" font-family="sans-serif" text-anchor="middle">8</text>
+            <rect x="143" y="52" width="89" height="28" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+            <circle cx="155" cy="66" r="5" fill="rgba(109,213,237,0.35)"/><text x="165" y="63" fill="rgba(255,255,255,0.35)" font-size="6.5" font-family="sans-serif">Marc D.</text><text x="165" y="73" fill="rgba(255,255,255,0.18)" font-size="5.5" font-family="sans-serif">Email sent · auto</text>
+            <rect x="143" y="84" width="89" height="28" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+            <circle cx="155" cy="98" r="5" fill="rgba(167,139,250,0.3)"/><text x="165" y="95" fill="rgba(255,255,255,0.35)" font-size="6.5" font-family="sans-serif">Alex P.</text><text x="165" y="105" fill="rgba(255,255,255,0.18)" font-size="5.5" font-family="sans-serif">SMS · replied</text>
+
+            <!-- Col 3: Qualified -->
+            <rect x="252" y="14" width="105" height="195" rx="8" fill="rgba(250,204,21,0.04)" stroke="rgba(250,204,21,0.12)" stroke-width="1"/>
+            <text x="304" y="33" fill="rgba(250,204,21,0.55)" font-size="8" font-family="sans-serif" text-anchor="middle" font-weight="600">Qualified</text>
+            <text x="304" y="44" fill="rgba(250,204,21,0.3)" font-size="7" font-family="sans-serif" text-anchor="middle">5</text>
+            <rect x="260" y="52" width="89" height="28" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(250,204,21,0.12)" stroke-width="0.8"/>
+            <circle cx="272" cy="66" r="5" fill="rgba(250,204,21,0.3)"/><text x="282" y="63" fill="rgba(255,255,255,0.35)" font-size="6.5" font-family="sans-serif">Noah B.</text><text x="282" y="73" fill="rgba(255,255,255,0.18)" font-size="5.5" font-family="sans-serif">Call booked</text>
+
+            <!-- Col 4: Won -->
+            <rect x="369" y="14" width="115" height="195" rx="8" fill="rgba(74,222,128,0.04)" stroke="rgba(74,222,128,0.15)" stroke-width="1"/>
+            <text x="426" y="33" fill="rgba(74,222,128,0.6)" font-size="8" font-family="sans-serif" text-anchor="middle" font-weight="600">Won</text>
+            <text x="426" y="44" fill="rgba(74,222,128,0.35)" font-size="7" font-family="sans-serif" text-anchor="middle">$45k MRR</text>
+            <rect x="377" y="52" width="99" height="28" rx="5" fill="rgba(74,222,128,0.06)" stroke="rgba(74,222,128,0.18)" stroke-width="0.8"/>
+            <circle cx="389" cy="66" r="5" fill="rgba(74,222,128,0.4)"/><text x="399" y="63" fill="rgba(255,255,255,0.4)" font-size="6.5" font-family="sans-serif">Dania R.</text><text x="399" y="73" fill="rgba(74,222,128,0.45)" font-size="5.5" font-family="sans-serif">$8.5k · Closed</text>
+            <rect x="377" y="84" width="99" height="28" rx="5" fill="rgba(74,222,128,0.06)" stroke="rgba(74,222,128,0.18)" stroke-width="0.8"/>
+            <circle cx="389" cy="98" r="5" fill="rgba(74,222,128,0.4)"/><text x="399" y="95" fill="rgba(255,255,255,0.4)" font-size="6.5" font-family="sans-serif">Leo F.</text><text x="399" y="105" fill="rgba(74,222,128,0.45)" font-size="5.5" font-family="sans-serif">$12k · Closed</text>
+
+            <!-- Automation flow arrows between columns -->
+            <path d="M123 70 C130 70 132 70 135 70" stroke="rgba(167,139,250,0.3)" stroke-width="1" stroke-dasharray="3 2" marker-end="url(#arrowV)"/>
+            <path d="M240 70 C247 70 249 70 252 70" stroke="rgba(109,213,237,0.3)" stroke-width="1" stroke-dasharray="3 2"/>
+            <path d="M357 70 C364 70 366 70 369 70" stroke="rgba(250,204,21,0.3)" stroke-width="1" stroke-dasharray="3 2"/>
+
+            <!-- Automation badge bottom-left -->
+            <rect x="24" y="170" width="80" height="24" rx="12" fill="rgba(74,222,128,0.08)" stroke="rgba(74,222,128,0.2)" stroke-width="0.8"/>
+            <circle cx="36" cy="182" r="3" fill="#4ADE80"/><text x="44" y="185" fill="rgba(74,222,128,0.6)" font-size="6.5" font-family="sans-serif">Automated</text>
+
+            <!-- GHL logo hint -->
+            <rect x="380" y="170" width="96" height="24" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+            <text x="393" y="185" fill="rgba(255,255,255,0.2)" font-size="6.5" font-family="sans-serif">via GoHighLevel</text>
+          </svg>
+          <div class="case-orb o1"></div>
+          <div class="case-orb o2"></div>
+          <div class="case-badge"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8 L6 12 L14 4" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lead Gen</div>
+        </div>
+        <div class="case-body">
+        <p class="case-industry en">Digital Agency</p>
+        <p class="case-industry fr">Agence digitale</p>
+        <div class="en">
+          <h3>Lead Gen + CRM Automation for NeedCollab</h3>
+          <p class="case-desc">NeedCollab needed a scalable lead generation system. We automated their outbound outreach and inbound lead response, built a full CRM pipeline, and connected everything into one seamless system.</p>
+        </div>
+        <div class="fr">
+          <h3>G&eacute;n&eacute;ration de leads + CRM pour NeedCollab</h3>
+          <p class="case-desc">NeedCollab avait besoin d'un syst&egrave;me de g&eacute;n&eacute;ration de leads scalable. On a automatis&eacute; leur outreach sortant et la r&eacute;ponse aux leads entrants, b&acirc;ti un pipeline CRM complet, et tout connect&eacute; en un seul syst&egrave;me.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="metric">
+            <span class="value">27</span>
+            <span class="label en">meetings / month</span>
+            <span class="label fr">rendez-vous / mois</span>
+          </div>
+          <div class="metric">
+            <span class="value">$45k</span>
+            <span class="label en">added MRR in 3 months</span>
+            <span class="label fr">MRR additionnel en 3 mois</span>
+          </div>
+          <div class="metric">
+            <span class="value">14 &rarr; 23%</span>
+            <span class="label en">close rate increase</span>
+            <span class="label fr">augmentation du taux de conversion</span>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Case Study 2: Coaching with Irfann -->
+      <div class="case-card reveal reveal-d1">
+        <div class="case-visual v2">
+          <svg viewBox="0 0 500 220" fill="none">
+            <!-- Make.com-style automation workflow visual -->
+            <!-- Background dots grid -->
+            <pattern id="dots2" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.6" fill="rgba(255,255,255,0.06)"/></pattern>
+            <rect width="500" height="220" fill="url(#dots2)"/>
+
+            <!-- Module 1: Calendly trigger -->
+            <circle cx="60" cy="90" r="26" fill="rgba(0,107,255,0.08)" stroke="rgba(0,107,255,0.3)" stroke-width="1.5"/>
+            <text x="60" y="85" fill="rgba(0,107,255,0.7)" font-size="7" font-family="sans-serif" text-anchor="middle" font-weight="600">Calendly</text>
+            <text x="60" y="96" fill="rgba(255,255,255,0.25)" font-size="5.5" font-family="sans-serif" text-anchor="middle">New booking</text>
+            <circle cx="60" cy="65" r="3" fill="rgba(0,107,255,0.5)"/>
+            <text x="60" cy="58" y="58" fill="rgba(0,107,255,0.4)" font-size="5" font-family="sans-serif" text-anchor="middle">TRIGGER</text>
+
+            <!-- Connector line 1→2 -->
+            <path d="M86 90 L130 90" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <circle cx="108" cy="90" r="2" fill="rgba(74,222,128,0.4)"/>
+
+            <!-- Module 2: AI Qualifier -->
+            <circle cx="158" cy="90" r="26" fill="rgba(167,139,250,0.08)" stroke="rgba(167,139,250,0.3)" stroke-width="1.5"/>
+            <text x="158" y="85" fill="rgba(167,139,250,0.7)" font-size="7" font-family="sans-serif" text-anchor="middle" font-weight="600">OpenAI</text>
+            <text x="158" y="96" fill="rgba(255,255,255,0.25)" font-size="5.5" font-family="sans-serif" text-anchor="middle">Qualify lead</text>
+
+            <!-- Connector line 2→router -->
+            <path d="M184 90 L220 90" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+            <!-- Router (diamond) -->
+            <rect x="224" y="76" width="28" height="28" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.15)" stroke-width="1" transform="rotate(45 238 90)"/>
+            <text x="238" y="93" fill="rgba(255,255,255,0.3)" font-size="7" font-family="sans-serif" text-anchor="middle">IF</text>
+
+            <!-- Branch A (qualified) → CRM -->
+            <path d="M252 82 L290 55" stroke="rgba(74,222,128,0.25)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <circle cx="271" cy="68" r="2" fill="rgba(74,222,128,0.4)"/>
+            <circle cx="320" cy="55" r="26" fill="rgba(74,222,128,0.06)" stroke="rgba(74,222,128,0.25)" stroke-width="1.5"/>
+            <text x="320" y="50" fill="rgba(74,222,128,0.6)" font-size="7" font-family="sans-serif" text-anchor="middle" font-weight="600">GHL CRM</text>
+            <text x="320" y="61" fill="rgba(255,255,255,0.25)" font-size="5.5" font-family="sans-serif" text-anchor="middle">Create contact</text>
+            <rect x="288" y="33" width="30" height="11" rx="5.5" fill="rgba(74,222,128,0.12)"/><text x="303" y="41" fill="rgba(74,222,128,0.5)" font-size="5" font-family="sans-serif" text-anchor="middle">qualified</text>
+
+            <!-- Branch A → Follow-up sequence -->
+            <path d="M346 55 L385 55" stroke="rgba(74,222,128,0.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <circle cx="415" cy="55" r="26" fill="rgba(109,213,237,0.06)" stroke="rgba(109,213,237,0.25)" stroke-width="1.5"/>
+            <text x="415" y="50" fill="rgba(109,213,237,0.6)" font-size="7" font-family="sans-serif" text-anchor="middle" font-weight="600">Email</text>
+            <text x="415" y="61" fill="rgba(255,255,255,0.25)" font-size="5.5" font-family="sans-serif" text-anchor="middle">Nurture seq.</text>
+
+            <!-- Branch B (not qualified) → tag -->
+            <path d="M252 98 L290 130" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <circle cx="320" cy="130" r="26" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+            <text x="320" y="125" fill="rgba(255,255,255,0.25)" font-size="7" font-family="sans-serif" text-anchor="middle" font-weight="600">GHL CRM</text>
+            <text x="320" y="136" fill="rgba(255,255,255,0.15)" font-size="5.5" font-family="sans-serif" text-anchor="middle">Tag &amp; nurture</text>
+            <rect x="288" y="108" width="40" height="11" rx="5.5" fill="rgba(255,255,255,0.05)"/><text x="308" y="116" fill="rgba(255,255,255,0.25)" font-size="5" font-family="sans-serif" text-anchor="middle">not qualified</text>
+
+            <!-- Stats overlay -->
+            <rect x="20" y="155" width="105" height="48" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="0.8"/>
+            <text x="32" y="172" fill="rgba(255,255,255,0.2)" font-size="6" font-family="sans-serif">Leads processed</text>
+            <text x="32" y="192" fill="rgba(74,222,128,0.55)" font-size="14" font-weight="bold" font-family="sans-serif">312</text>
+            <text x="66" y="192" fill="rgba(74,222,128,0.35)" font-size="7" font-family="sans-serif">/month</text>
+
+            <!-- Automation badge -->
+            <rect x="375" y="170" width="105" height="24" rx="12" fill="rgba(167,139,250,0.08)" stroke="rgba(167,139,250,0.2)" stroke-width="0.8"/>
+            <circle cx="388" cy="182" r="3" fill="rgba(167,139,250,0.6)"/><text x="397" y="185" fill="rgba(167,139,250,0.5)" font-size="6.5" font-family="sans-serif">via Make + GHL</text>
+          </svg>
+          <div class="case-orb o1" style="background:rgba(74,222,128,0.35)"></div>
+          <div class="case-orb o3"></div>
+          <div class="case-badge"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8 L6 12 L14 4" stroke="#6dd5ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>CRM Overhaul</div>
+        </div>
+        <div class="case-body">
+        <p class="case-industry">Coaching</p>
+        <div class="en">
+          <h3>Lead System Overhaul for Coaching with Irfann</h3>
+          <p class="case-desc">Irfann's coaching business had leads coming from multiple channels with inconsistent follow-ups. We rebuilt the entire system: automated lead capture, AI qualification, CRM entry, and follow-up sequences — replacing 25+ hours/month of manual work.</p>
+        </div>
+        <div class="fr">
+          <h3>Refonte du syst&egrave;me de leads pour Coaching with Irfann</h3>
+          <p class="case-desc">L'entreprise de coaching d'Irfann recevait des leads de multiples canaux avec des suivis incoh&eacute;rents. On a rebâti tout le syst&egrave;me : capture automatis&eacute;e, qualification IA, entr&eacute;e CRM et s&eacute;quences de suivi — rempla&ccedil;ant 25+ heures/mois de travail manuel.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="metric">
+            <span class="value">3x</span>
+            <span class="label en">more leads (no extra ad spend)</span>
+            <span class="label fr">plus de leads (sans pub suppl&eacute;mentaire)</span>
+          </div>
+          <div class="metric">
+            <span class="value">11 &rarr; 20%</span>
+            <span class="label en">close rate increase</span>
+            <span class="label fr">augmentation du taux de conversion</span>
+          </div>
+          <div class="metric">
+            <span class="value">+$10-15k</span>
+            <span class="label en">monthly revenue impact</span>
+            <span class="label fr">impact mensuel sur le revenu</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mid-page CTA 2 -->
+<div class="mid-cta reveal" style="text-align:center;padding:3rem 2rem">
+  <p class="en" style="color:#888;margin-bottom:1rem;font-size:1rem">Want similar results?</p>
+  <p class="fr" style="color:#888;margin-bottom:1rem;font-size:1rem">Vous voulez des r&eacute;sultats similaires ?</p>
+  <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white"><div class="pill-text-wrap"><span class="pill-text">Let's Talk</span><span class="pill-text-hover">Let's Talk</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+</div>
+
+<!-- ==================== ABOUT ==================== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner reveal">
+      <div class="about-photo">
+        <img src="abdel.jpg" alt="Abdel - Founder of The Relay Labs" loading="lazy">
+      </div>
+      <div class="about-text">
+        <div class="en">
+          <div class="section-label"><span class="num">5</span><span class="label-text">Meet the Founder</span></div>
+          <h2>Abdel Boughaleb</h2>
+          <p class="about-role">Founder &amp; Automation Architect</p>
+          <p>Abdel is a strategic consultant and automation architect based in Montreal. He founded The Relay Labs to help businesses across Quebec scale their operations with AI-powered workflows, lead generation systems, and voice agents — without adding headcount.</p>
+          <p>Bilingual. Relentless about building systems that actually work.</p>
+        </div>
+        <div class="fr">
+          <div class="section-label"><span class="num">5</span><span class="label-text">Le Fondateur</span></div>
+          <h2>Abdel Boughaleb</h2>
+          <p class="about-role">Founder &amp; Automation Architect</p>
+          <p>Abdel est consultant strat&eacute;gique et architecte en automatisation bas&eacute; &agrave; Montr&eacute;al. Il a fond&eacute; The Relay Labs pour aider les entreprises du Qu&eacute;bec &agrave; scaler leurs op&eacute;rations avec des workflows IA, des syst&egrave;mes de g&eacute;n&eacute;ration de leads et des agents vocaux — sans embaucher.</p>
+          <p>Bilingue. Obsess&eacute; par les syst&egrave;mes qui marchent vraiment.</p>
+        </div>
+        <div class="about-links">
+          <a href="https://www.linkedin.com/in/abdel-boughaleb/" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="en">
+      <div class="section-label reveal"><span class="num">6</span><span class="label-text">FAQ</span></div>
+      <h2 class="section-title reveal" style="margin-bottom:2.5rem">Questions? Answers.</h2>
+    </div>
+    <div class="fr">
+      <div class="section-label reveal"><span class="num">6</span><span class="label-text">FAQ</span></div>
+      <h2 class="section-title reveal" style="margin-bottom:2.5rem">Questions? R&eacute;ponses.</h2>
+    </div>
+
+    <div class="faq-list">
+      <!-- FAQ 1 -->
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <h3 class="en">How long does it take to build an automation system?</h3>
+          <h3 class="fr">Combien de temps faut-il pour construire un syst&egrave;me d'automatisation ?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner en">Most projects take 2 to 4 weeks from discovery call to launch. Simple automations can go live in under a week. Complex systems with AI agents and multi-channel integrations may take up to 6 weeks.</div>
+          <div class="faq-a-inner fr">La plupart des projets prennent 2 &agrave; 4 semaines, de l'appel d&eacute;couverte au lancement. Les automatisations simples peuvent &ecirc;tre en ligne en moins d'une semaine. Les syst&egrave;mes complexes avec agents IA et int&eacute;grations multi-canaux peuvent prendre jusqu'&agrave; 6 semaines.</div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item reveal reveal-d1">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <h3 class="en">Do I need technical skills to use the systems you build?</h3>
+          <h3 class="fr">Est-ce que j'ai besoin de comp&eacute;tences techniques pour utiliser vos syst&egrave;mes ?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner en">Not at all. We build everything so your team can use it without any coding knowledge. We also provide training and documentation, and we handle all the technical maintenance.</div>
+          <div class="faq-a-inner fr">Pas du tout. On construit tout pour que votre &eacute;quipe puisse l'utiliser sans aucune connaissance technique. On fournit aussi la formation, la documentation, et on g&egrave;re toute la maintenance technique.</div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item reveal reveal-d1">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <h3 class="en">What's the difference between an AI agent and a simple chatbot?</h3>
+          <h3 class="fr">Quelle est la diff&eacute;rence entre un agent IA et un simple chatbot ?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner en">A chatbot follows a script. An AI agent understands context, makes decisions, and takes action — like booking appointments, qualifying leads, or routing calls intelligently. It's the difference between a phone tree and a real assistant.</div>
+          <div class="faq-a-inner fr">Un chatbot suit un script. Un agent IA comprend le contexte, prend des d&eacute;cisions et agit — comme prendre des rendez-vous, qualifier des leads ou router des appels intelligemment. C'est la diff&eacute;rence entre un menu t&eacute;l&eacute;phonique et un vrai assistant.</div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item reveal reveal-d2">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <h3 class="en">How does your intelligent customer service work?</h3>
+          <h3 class="fr">Comment fonctionne votre service client intelligent ?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner en">We deploy AI voice agents and chatbots trained on your business data. They handle inbound calls, answer customer questions, book appointments, and escalate to your team only when needed. It runs 24/7 — more clients served, less money spent on staffing.</div>
+          <div class="faq-a-inner fr">On d&eacute;ploie des agents vocaux IA et des chatbots entra&icirc;n&eacute;s sur les donn&eacute;es de votre entreprise. Ils g&egrave;rent les appels entrants, r&eacute;pondent aux questions, prennent des rendez-vous, et escaladent vers votre &eacute;quipe seulement quand c'est n&eacute;cessaire. &Ccedil;a tourne 24h/24 — plus de clients servis, moins de d&eacute;penses en personnel.</div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item reveal reveal-d2">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <h3 class="en">How much does it cost?</h3>
+          <h3 class="fr">Combien &ccedil;a co&ucirc;te ?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner en">Most projects range from $2,500 to $15,000 depending on complexity. Simple automations (email workflows, CRM sync) start around $2,500. Full lead gen + AI agent systems are typically $8,000–$15,000. We scope everything during the discovery call and give you a clear quote — no surprises. Most clients see ROI within the first month.</div>
+          <div class="faq-a-inner fr">La plupart des projets varient entre 2 500$ et 15 000$ selon la complexit&eacute;. Les automatisations simples (workflows courriel, sync CRM) commencent autour de 2 500$. Les syst&egrave;mes complets de g&eacute;n&eacute;ration de leads + agents IA sont g&eacute;n&eacute;ralement entre 8 000$ et 15 000$. On d&eacute;finit tout lors de l'appel d&eacute;couverte et on vous donne un devis clair — sans surprises. La plupart des clients voient un ROI d&egrave;s le premier mois.</div>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-item reveal reveal-d3">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <h3 class="en">Do you work with businesses outside Quebec?</h3>
+          <h3 class="fr">Est-ce que vous travaillez avec des entreprises hors Qu&eacute;bec ?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner en">Yes. While most of our clients are based in Quebec, everything we build works remotely. We've worked with businesses across Canada and internationally. If you need automation, we can help — regardless of location.</div>
+          <div class="faq-a-inner fr">Oui. Bien que la plupart de nos clients soient bas&eacute;s au Qu&eacute;bec, tout ce qu'on construit fonctionne &agrave; distance. On a travaill&eacute; avec des entreprises partout au Canada et &agrave; l'international. Si vous avez besoin d'automatisation, on peut aider — peu importe o&ugrave; vous &ecirc;tes.</div>
+        </div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="faq-item reveal reveal-d3">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <h3 class="en">What happens after launch? Do you provide support?</h3>
+          <h3 class="fr">Que se passe-t-il apr&egrave;s le lancement ? Offrez-vous du support ?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner en">Absolutely. Every project includes a support period after launch. We monitor your systems, fix any issues, and optimize performance. We also offer ongoing retainer plans for teams that want continuous improvements.</div>
+          <div class="faq-a-inner fr">Absolument. Chaque projet inclut une p&eacute;riode de support apr&egrave;s le lancement. On surveille vos syst&egrave;mes, on corrige les probl&egrave;mes et on optimise la performance. On offre aussi des forfaits de support continu pour les &eacute;quipes qui veulent des am&eacute;liorations continues.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA after FAQ -->
+    <div style="text-align:center;margin-top:3rem" class="reveal">
+      <p class="en" style="color:#888;margin-bottom:1rem;font-size:0.95rem">Still have questions?</p>
+      <p class="fr" style="color:#888;margin-bottom:1rem;font-size:0.95rem">Encore des questions ?</p>
+      <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white en"><div class="pill-text-wrap"><span class="pill-text">Book a Free Call</span><span class="pill-text-hover">Book a Free Call</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+      <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white fr"><div class="pill-text-wrap"><span class="pill-text">Discutons gratuit</span><span class="pill-text-hover">Discutons gratuit</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <div class="en">
+          <h2>Work with us.</h2>
+          <p>Book a free 30-minute discovery call. We'll map out your biggest automation opportunities and show you what's possible.</p>
+          <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="calendly-cta">Let's Talk</a>
+          <p class="or-text">or send us a message below</p>
+        </div>
+        <div class="fr">
+          <h2>Travaillons ensemble.</h2>
+          <p>R&eacute;servez un appel d&eacute;couverte gratuit de 30 minutes. On identifiera vos meilleures opportunit&eacute;s d'automatisation et on vous montrera ce qui est possible.</p>
+          <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="calendly-cta">Discutons d&eacute;couverte</a>
+          <p class="or-text">ou envoyez-nous un message ci-dessous</p>
+        </div>
+        <!-- Trust reinforcement near CTA -->
+        <div class="trust-mini">
+          <p class="quote-mini en">"<strong>Abdel delivers real results</strong> — our system is now automated, centralized, and scalable." — Irfann</p>
+          <p class="quote-mini fr">"<strong>Abdel livre de vrais r&eacute;sultats</strong> — notre syst&egrave;me est automatis&eacute;, centralis&eacute; et scalable." — Irfann</p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="name" required placeholder="Your name">
+        <input type="email" name="email" required placeholder="Email address">
+        <input type="text" name="company" placeholder="Company (optional)">
+        <select name="service" required id="service-select">
+          <option value="" disabled selected data-en="Select a service..." data-fr="S&eacute;lectionnez un service...">Select a service...</option>
+          <option value="ai-automations" data-en="AI-Powered Automations" data-fr="Automatisations IA">AI-Powered Automations</option>
+          <option value="leadgen-crm" data-en="Lead Gen + CRM" data-fr="G&eacute;n&eacute;ration de leads + CRM">Lead Gen + CRM</option>
+          <option value="voice-agents" data-en="Intelligent Customer Service &amp; AI Agents" data-fr="Service client intelligent &amp; Agents IA">Intelligent Customer Service &amp; AI Agents</option>
+          <option value="other" data-en="Other" data-fr="Autre">Other</option>
+        </select>
+        <textarea name="details" rows="4" placeholder="Tell us about your project..."></textarea>
+        <button type="submit" class="form-submit en">Send Message</button>
+        <button type="submit" class="form-submit fr">Envoyer</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER CTA ==================== -->
+<section class="footer-cta">
+  <div class="container">
+  <p class="footer-cta-label en">Work with us</p>
+  <p class="footer-cta-label fr">Travaillons ensemble</p>
+  <h2 class="en">Start with a free, thirty minute<br>growth mapping call.</h2>
+  <h2 class="fr">Commencez avec un appel gratuit<br>de 30 minutes.</h2>
+  <p class="en">We'll map your biggest automation opportunities and show you what's possible.</p>
+  <p class="fr">On identifie vos meilleures opportunit&eacute;s d'automatisation et on vous montre ce qui est possible.</p>
+  <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="pill-btn"><div class="pill-text-wrap"><span class="pill-text en">Let's talk</span><span class="pill-text fr">Discutons</span><span class="pill-text-hover en">Let's talk</span><span class="pill-text-hover fr">Discutons</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+  <svg class="footer-cta-logo" viewBox="0 0 200 180" fill="none">
+    <rect x="10" y="10" width="22" height="155" rx="11" stroke="#fff" stroke-width="1.5" fill="none"/>
+    <path d="M32 10 H100 C135 10 158 33 158 60 C158 87 135 110 100 110 H32" stroke="#fff" stroke-width="1.5" fill="none"/>
+    <line x1="95" y1="100" x2="165" y2="165" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="170" cy="15" r="12" fill="#4ADE80"/>
+  </svg>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer" style="flex-wrap:wrap;gap:1rem">
+  <div>
+    <span>&copy; 2026 The Relay Labs</span>
+    <span style="margin-left:1rem">Montreal, QC</span>
+    <span style="margin-left:1rem"><a href="mailto:hello@therelaylabs.com" style="color:#4ADE80">hello@therelaylabs.com</a></span>
+  </div>
+  <div class="footer-links">
+    <a href="#services" class="en">Services</a>
+    <a href="#services" class="fr">Services</a>
+    <a href="#work" class="en">Work</a>
+    <a href="#work" class="fr">Projets</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="en">Contact</a>
+    <a href="#contact" class="fr">Contact</a>
+    <a href="https://www.linkedin.com/in/abdel-boughaleb/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+// Word Rotator
+document.querySelectorAll('.word-rotator').forEach(rotator => {
+  const words = JSON.parse(rotator.dataset.words);
+  let idx = 0;
+  words.slice(1).forEach(w => {
+    const span = document.createElement('span');
+    span.className = 'word';
+    span.innerHTML = w;
+    rotator.appendChild(span);
+  });
+  const allWords = rotator.querySelectorAll('.word');
+  setInterval(() => {
+    const current = allWords[idx];
+    current.classList.remove('active');
+    current.classList.add('exit');
+    idx = (idx + 1) % allWords.length;
+    const next = allWords[idx];
+    next.classList.remove('exit');
+    next.classList.add('active');
+    setTimeout(() => { current.classList.remove('exit'); }, 600);
+  }, 2800);
+});
+
+// Language toggle
+document.querySelectorAll('[data-set-lang]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.setLang;
+    document.documentElement.setAttribute('data-lang', lang);
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Update form placeholders
+    if (lang === 'fr') {
+      document.querySelector('[name="name"]').placeholder = 'Nom';
+      document.querySelector('[name="email"]').placeholder = 'Courriel';
+      document.querySelector('[name="company"]').placeholder = 'Entreprise';
+      document.querySelector('[name="details"]').placeholder = 'D\u00e9tails du projet';
+    } else {
+      document.querySelector('[name="name"]').placeholder = 'Name';
+      document.querySelector('[name="email"]').placeholder = 'Email';
+      document.querySelector('[name="company"]').placeholder = 'Company';
+      document.querySelector('[name="details"]').placeholder = 'Project details';
+    }
+    // Update select options text for current language
+    document.querySelectorAll('#service-select option').forEach(opt => {
+      const text = opt.getAttribute('data-' + lang);
+      if (text) opt.textContent = text;
+    });
+  });
+});
+// Set default EN placeholders
+document.querySelector('[name="name"]').placeholder = 'Name';
+document.querySelector('[name="email"]').placeholder = 'Email';
+document.querySelector('[name="company"]').placeholder = 'Company';
+document.querySelector('[name="details"]').placeholder = 'Project details';
+
+// Mobile menu
+document.getElementById('mobile-toggle').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+
+// Scroll reveal
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('vis');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// Smooth scroll & close mobile menu
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('nav-links').classList.remove('open');
+  });
+});
+
+// Animated counters for case study metrics
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const vals = e.target.querySelectorAll('.metric .value');
+      vals.forEach(v => {
+        const final = v.textContent;
+        const numMatch = final.match(/(\d+)/);
+        if (numMatch) {
+          const target = parseInt(numMatch[1]);
+          const prefix = final.slice(0, final.indexOf(numMatch[1]));
+          const suffix = final.slice(final.indexOf(numMatch[1]) + numMatch[1].length);
+          let current = 0;
+          const step = Math.max(1, Math.floor(target / 30));
+          const timer = setInterval(() => {
+            current = Math.min(current + step, target);
+            v.textContent = prefix + current + suffix;
+            if (current >= target) { v.textContent = final; clearInterval(timer); }
+          }, 35);
+        }
+      });
+      counterObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.case-card').forEach(c => counterObs.observe(c));
+
+// Contact form — sends to Make webhook, falls back to mailto
+const MAKE_WEBHOOK_URL = ''; // Paste your Make webhook URL here
+document.getElementById('contact-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.form-submit');
+  const lang = document.documentElement.getAttribute('data-lang');
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    company: form.company.value,
+    service: form.service.value,
+    details: form.details.value,
+    lang: lang,
+    submitted_at: new Date().toISOString()
+  };
+  btn.disabled = true;
+  btn.textContent = lang === 'fr' ? 'Envoi...' : 'Sending...';
+  let sent = false;
+  if (MAKE_WEBHOOK_URL) {
+    try {
+      const res = await fetch(MAKE_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (res.ok) sent = true;
+    } catch (err) { console.warn('Webhook failed, falling back to mailto', err); }
+  }
+  if (!sent) {
+    const subject = encodeURIComponent('New lead from therelaylabs.com: ' + data.name);
+    const body = encodeURIComponent(
+      'Name: ' + data.name + '\nEmail: ' + data.email + '\nCompany: ' + data.company +
+      '\nService: ' + data.service + '\nDetails: ' + data.details
+    );
+    window.location.href = 'mailto:hello@therelaylabs.com?subject=' + subject + '&body=' + body;
+  }
+  btn.textContent = lang === 'fr' ? 'Envoy\u00e9 !' : 'Sent!';
+  btn.style.background = 'linear-gradient(135deg,#a78bfa,#4ADE80)';
+  btn.style.color = '#fff';
+  btn.disabled = false;
+  setTimeout(() => {
+    btn.textContent = lang === 'fr' ? 'Envoyer' : 'Send Message';
+    btn.style.background = '#fff';
+    btn.style.color = '#0a0a0a';
+    form.reset();
+  }, 2500);
+});
+</script>
+</body>
+</html>
