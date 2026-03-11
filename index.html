@@ -254,7 +254,7 @@ section{padding:6rem 2rem}
 @media(max-width:640px){.about-inner{grid-template-columns:1fr;text-align:center;justify-items:center}.about-photo{min-height:300px;max-width:320px;width:100%}}
 
 /* ===================== FAQ ===================== */
-.faq{background:#0a0a0a}
+.faq{background:#0a0a0a;padding-bottom:3rem}
 .faq-list{max-width:750px;display:flex;flex-direction:column;gap:0.75rem}
 .faq-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:border-color 0.3s}
 .faq-item.open{border-color:rgba(74,222,128,0.25)}
@@ -267,7 +267,7 @@ section{padding:6rem 2rem}
 .faq-a-inner{padding:0 1.5rem 1.3rem;font-size:1.05rem;color:#999;line-height:1.7}
 
 /* ===================== CONTACT ===================== */
-.contact{background:#0a0a0a}
+.contact{background:#0a0a0a;padding-top:3rem}
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 .contact-left h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:900;color:#fff;letter-spacing:-0.03em;margin-bottom:1rem;line-height:1.1}
 .contact-left p{color:#888;font-size:1rem;line-height:1.7;margin-bottom:2rem}
@@ -353,14 +353,14 @@ section{padding:6rem 2rem}
   <div class="nav-right">
     <button class="lang-btn active" data-set-lang="en">EN</button>
     <button class="lang-btn" data-set-lang="fr">FR</button>
-    <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="nav-cta pill-btn en">
+    <button onclick="openCal()" class="nav-cta pill-btn en" style="cursor:pointer;border:none;background:inherit">
       <div class="pill-text-wrap"><span class="pill-text">Let's talk</span><span class="pill-text-hover">Let's talk</span></div>
       <div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    </a>
-    <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="nav-cta pill-btn fr">
+    </button>
+    <button onclick="openCal()" class="nav-cta pill-btn fr" style="cursor:pointer;border:none;background:inherit">
       <div class="pill-text-wrap"><span class="pill-text">Discutons</span><span class="pill-text-hover">Discutons</span></div>
       <div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    </a>
+    </button>
     <button class="mobile-toggle" id="mobile-toggle">&#9776;</button>
   </div>
 </nav>
@@ -373,7 +373,7 @@ section{padding:6rem 2rem}
       <h1>From cold lead to closed deal —<br><span class="accent"><span class="word-rotator" data-words='["automated.","on autopilot.","handled by AI.","running 24/7."]'><span class="word active">automated.</span></span></span></h1>
       <p class="subtitle">AI automations, lead gen systems, and voice agents — so you can scale without the overhead.</p>
       <div class="hero-btns">
-        <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white"><div class="pill-text-wrap"><span class="pill-text">Let's Talk</span><span class="pill-text-hover">Let's Talk</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+        <button onclick="openCal()" class="hero-pill white" style="cursor:pointer;border:none"><div class="pill-text-wrap"><span class="pill-text">Let's Talk</span><span class="pill-text-hover">Let's Talk</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></button>
         <a href="#services" class="hero-pill dark"><div class="pill-text-wrap"><span class="pill-text">Explore Services</span><span class="pill-text-hover">Explore Services</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
       </div>
     </div>
@@ -382,7 +382,7 @@ section{padding:6rem 2rem}
       <h1>Du lead froid au contrat sign&eacute; —<br><span class="accent"><span class="word-rotator" data-words='["automatis&eacute;.","en pilote automatique.","g&eacute;r&eacute; par l\u0027IA.","actif 24h/24."]'><span class="word active">automatis&eacute;.</span></span></span></h1>
       <p class="subtitle">Automatisations IA, g&eacute;n&eacute;ration de leads et agents vocaux — pour grandir sans surcharge.</p>
       <div class="hero-btns">
-        <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white"><div class="pill-text-wrap"><span class="pill-text">Discutons</span><span class="pill-text-hover">Discutons</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+        <button onclick="openCal()" class="hero-pill white" style="cursor:pointer;border:none"><div class="pill-text-wrap"><span class="pill-text">Discutons</span><span class="pill-text-hover">Discutons</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></button>
         <a href="#services" class="hero-pill dark"><div class="pill-text-wrap"><span class="pill-text">D&eacute;couvrir nos services</span><span class="pill-text-hover">D&eacute;couvrir nos services</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
       </div>
     </div>
@@ -596,7 +596,7 @@ section{padding:6rem 2rem}
 <div class="mid-cta reveal" style="text-align:center;padding:3rem 2rem">
   <p class="en" style="color:#888;margin-bottom:1rem;font-size:1rem">Ready to automate?</p>
   <p class="fr" style="color:#888;margin-bottom:1rem;font-size:1rem">Pr&ecirc;t &agrave; automatiser ?</p>
-  <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white"><div class="pill-text-wrap"><span class="pill-text">Let's Talk</span><span class="pill-text-hover">Let's Talk</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+  <button onclick="openCal()" class="hero-pill white" style="cursor:pointer;border:none"><div class="pill-text-wrap"><span class="pill-text">Let's Talk</span><span class="pill-text-hover">Let's Talk</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></button>
 </div>
 
 <!-- ==================== APPS WE WORK WITH ==================== -->
@@ -641,8 +641,8 @@ section{padding:6rem 2rem}
         <span class="app-name">OpenAI</span>
       </div>
       <div class="app-item">
-        <div class="app-icon"><img src="https://img.logo.dev/calendly.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Calendly"></div>
-        <span class="app-name">Calendly</span>
+        <div class="app-icon"><img src="https://img.logo.dev/cal.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Cal.com"></div>
+        <span class="app-name">Cal.com</span>
       </div>
       <div class="app-item">
         <div class="app-icon"><img src="https://img.logo.dev/twilio.com?token=pk_LMBztDKVRFSwHbuoJiA25g&format=png&retina=true" alt="Twilio"></div>
@@ -698,11 +698,11 @@ section{padding:6rem 2rem}
         <div class="step-number">1</div>
         <div class="en">
           <h3>Audit &amp; Strategy</h3>
-          <p>Free 30-min call. We audit your current processes, identify what's costing you time and money, and map the top 3 automation opportunities. You get a free recorded Loom audit of your current stack.</p>
+          <p>Free 30-min call to find your top 3 automation wins. You get a recorded Loom audit of your current stack.</p>
         </div>
         <div class="fr">
           <h3>Audit &amp; strat&eacute;gie</h3>
-          <p>Appel gratuit de 30 min. On audite vos processus actuels, identifie ce qui vous co&ucirc;te du temps et de l'argent, et cible les 3 meilleures opportunit&eacute;s. Vous recevez un audit vid&eacute;o Loom gratuit de votre stack actuel.</p>
+          <p>Appel gratuit de 30 min pour identifier vos 3 meilleures opportunit&eacute;s d'automatisation. Vous recevez un audit vid&eacute;o Loom de votre stack.</p>
         </div>
       </div>
       <div class="step reveal reveal-d1">
@@ -710,22 +710,22 @@ section{padding:6rem 2rem}
         <div class="step-number">2</div>
         <div class="en">
           <h3>Build in 2-4 Weeks</h3>
-          <p>We build your system on Make.com or n8n, wire up AI where it matters, and test every scenario before anything goes live. Weekly progress updates + a test environment you can try yourself.</p>
+          <p>We build on Make.com or n8n, wire up AI where it matters, and test everything before go-live. Weekly updates + a test environment you can try.</p>
         </div>
         <div class="fr">
           <h3>Construction en 2-4 semaines</h3>
-          <p>On construit votre syst&egrave;me sur Make.com ou n8n, on int&egrave;gre l'IA l&agrave; o&ugrave; &ccedil;a compte, et on teste chaque sc&eacute;nario avant la mise en ligne. Mises &agrave; jour hebdomadaires + un environnement de test que vous pouvez essayer.</p>
+          <p>On construit sur Make.com ou n8n, on int&egrave;gre l'IA o&ugrave; &ccedil;a compte, et on teste tout avant la mise en ligne. Mises &agrave; jour hebdo + un environnement de test.</p>
         </div>
       </div>
       <div class="step reveal reveal-d2">
         <div class="step-number">3</div>
         <div class="en">
           <h3>Launch &amp; Grow</h3>
-          <p>We deploy, train your team with a video walkthrough, and stay on for 30 days of free support. Most clients see ROI in the first month.</p>
+          <p>We deploy, train your team with a video walkthrough, and stay on for 30 days of free support. Most clients see ROI within the first month.</p>
         </div>
         <div class="fr">
           <h3>Lancement &amp; croissance</h3>
-          <p>On d&eacute;ploie, forme votre &eacute;quipe avec un walkthrough vid&eacute;o, et reste disponible pour 30 jours de support gratuit. La plupart des clients voient un ROI d&egrave;s le premier mois.</p>
+          <p>On d&eacute;ploie, forme votre &eacute;quipe avec un walkthrough vid&eacute;o, et reste disponible 30 jours. La plupart des clients voient un ROI d&egrave;s le premier mois.</p>
         </div>
       </div>
     </div>
@@ -851,9 +851,9 @@ section{padding:6rem 2rem}
             <pattern id="dots2" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.6" fill="rgba(255,255,255,0.06)"/></pattern>
             <rect width="500" height="220" fill="url(#dots2)"/>
 
-            <!-- Module 1: Calendly trigger -->
+            <!-- Module 1: Cal.com trigger -->
             <circle cx="60" cy="90" r="26" fill="rgba(0,107,255,0.08)" stroke="rgba(0,107,255,0.3)" stroke-width="1.5"/>
-            <text x="60" y="85" fill="rgba(0,107,255,0.7)" font-size="7" font-family="sans-serif" text-anchor="middle" font-weight="600">Calendly</text>
+            <text x="60" y="85" fill="rgba(0,107,255,0.7)" font-size="7" font-family="sans-serif" text-anchor="middle" font-weight="600">Cal.com</text>
             <text x="60" y="96" fill="rgba(255,255,255,0.25)" font-size="5.5" font-family="sans-serif" text-anchor="middle">New booking</text>
             <circle cx="60" cy="65" r="3" fill="rgba(0,107,255,0.5)"/>
             <text x="60" cy="58" y="58" fill="rgba(0,107,255,0.4)" font-size="5" font-family="sans-serif" text-anchor="middle">TRIGGER</text>
@@ -931,7 +931,7 @@ section{padding:6rem 2rem}
             <span class="label fr">augmentation du taux de conversion</span>
           </div>
           <div class="metric">
-            <span class="value">+$10-15k</span>
+            <span class="value">+$10k</span>
             <span class="label en">monthly revenue impact</span>
             <span class="label fr">impact mensuel sur le revenu</span>
           </div>
@@ -946,7 +946,7 @@ section{padding:6rem 2rem}
 <div class="mid-cta reveal" style="text-align:center;padding:3rem 2rem">
   <p class="en" style="color:#888;margin-bottom:1rem;font-size:1rem">Want similar results?</p>
   <p class="fr" style="color:#888;margin-bottom:1rem;font-size:1rem">Vous voulez des r&eacute;sultats similaires ?</p>
-  <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white"><div class="pill-text-wrap"><span class="pill-text">Let's Talk</span><span class="pill-text-hover">Let's Talk</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+  <button onclick="openCal()" class="hero-pill white" style="cursor:pointer;border:none"><div class="pill-text-wrap"><span class="pill-text">Let's Talk</span><span class="pill-text-hover">Let's Talk</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></button>
 </div>
 
 <!-- ==================== ABOUT ==================== -->
@@ -961,14 +961,14 @@ section{padding:6rem 2rem}
           <div class="section-label"><span class="num">5</span><span class="label-text">Meet the Founder</span></div>
           <h2>Abdel Boughaleb</h2>
           <p class="about-role">Founder &amp; Automation Architect</p>
-          <p>Abdel is a strategic consultant and automation architect based in Montreal. He founded The Relay Labs to help businesses across Quebec scale their operations with AI-powered workflows, lead generation systems, and voice agents — without adding headcount.</p>
+          <p>I founded The Relay Labs to help businesses across Quebec scale their operations with AI-powered workflows, lead generation systems, and voice agents — without adding headcount.</p>
           <p>Bilingual. Relentless about building systems that actually work.</p>
         </div>
         <div class="fr">
           <div class="section-label"><span class="num">5</span><span class="label-text">Le Fondateur</span></div>
           <h2>Abdel Boughaleb</h2>
           <p class="about-role">Founder &amp; Automation Architect</p>
-          <p>Abdel est consultant strat&eacute;gique et architecte en automatisation bas&eacute; &agrave; Montr&eacute;al. Il a fond&eacute; The Relay Labs pour aider les entreprises du Qu&eacute;bec &agrave; scaler leurs op&eacute;rations avec des workflows IA, des syst&egrave;mes de g&eacute;n&eacute;ration de leads et des agents vocaux — sans embaucher.</p>
+          <p>J'ai fond&eacute; The Relay Labs pour aider les entreprises du Qu&eacute;bec &agrave; scaler leurs op&eacute;rations avec des workflows IA, des syst&egrave;mes de g&eacute;n&eacute;ration de leads et des agents vocaux — sans embaucher.</p>
           <p>Bilingue. Obsess&eacute; par les syst&egrave;mes qui marchent vraiment.</p>
         </div>
         <div class="about-links">
@@ -1091,8 +1091,8 @@ section{padding:6rem 2rem}
     <div style="text-align:center;margin-top:3rem" class="reveal">
       <p class="en" style="color:#888;margin-bottom:1rem;font-size:0.95rem">Still have questions?</p>
       <p class="fr" style="color:#888;margin-bottom:1rem;font-size:0.95rem">Encore des questions ?</p>
-      <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white en"><div class="pill-text-wrap"><span class="pill-text">Book a Free Call</span><span class="pill-text-hover">Book a Free Call</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
-      <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="hero-pill white fr"><div class="pill-text-wrap"><span class="pill-text">Discutons gratuit</span><span class="pill-text-hover">Discutons gratuit</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+      <button onclick="openCal()" class="hero-pill white en" style="cursor:pointer;border:none"><div class="pill-text-wrap"><span class="pill-text">Book a Free Call</span><span class="pill-text-hover">Book a Free Call</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></button>
+      <button onclick="openCal()" class="hero-pill white fr" style="cursor:pointer;border:none"><div class="pill-text-wrap"><span class="pill-text">Discutons gratuit</span><span class="pill-text-hover">Discutons gratuit</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></button>
     </div>
   </div>
 </section>
@@ -1100,42 +1100,22 @@ section{padding:6rem 2rem}
 <!-- ==================== CONTACT ==================== -->
 <section class="contact" id="contact">
   <div class="container">
-    <div class="contact-inner">
-      <div class="contact-left">
-        <div class="en">
-          <h2>Work with us.</h2>
-          <p>Book a free 30-minute discovery call. We'll map out your biggest automation opportunities and show you what's possible.</p>
-          <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="calendly-cta">Let's Talk</a>
-          <p class="or-text">or send us a message below</p>
-        </div>
-        <div class="fr">
-          <h2>Travaillons ensemble.</h2>
-          <p>R&eacute;servez un appel d&eacute;couverte gratuit de 30 minutes. On identifiera vos meilleures opportunit&eacute;s d'automatisation et on vous montrera ce qui est possible.</p>
-          <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="calendly-cta">Discutons d&eacute;couverte</a>
-          <p class="or-text">ou envoyez-nous un message ci-dessous</p>
-        </div>
-        <!-- Trust reinforcement near CTA -->
-        <div class="trust-mini">
-          <p class="quote-mini en">"<strong>Abdel delivers real results</strong> — our system is now automated, centralized, and scalable." — Irfaan</p>
-          <p class="quote-mini fr">"<strong>Abdel livre de vrais r&eacute;sultats</strong> — notre syst&egrave;me est automatis&eacute;, centralis&eacute; et scalable." — Irfaan</p>
-        </div>
+    <div class="contact-inner" style="flex-direction:column;align-items:center;text-align:center;max-width:640px;margin:0 auto">
+      <div class="en">
+        <h2>Work with us.</h2>
+        <p style="color:#999;margin-bottom:2rem">Book a free 30-minute discovery call. We'll map out your biggest automation opportunities and show you what's possible.</p>
+        <button onclick="openCal()" class="calendly-cta" style="cursor:pointer;border:none">Book a Call</button>
       </div>
-
-      <form class="contact-form" id="contact-form">
-        <input type="text" name="name" required placeholder="Your name">
-        <input type="email" name="email" required placeholder="Email address">
-        <input type="text" name="company" placeholder="Company (optional)">
-        <select name="service" required id="service-select">
-          <option value="" disabled selected data-en="Select a service..." data-fr="S&eacute;lectionnez un service...">Select a service...</option>
-          <option value="ai-automations" data-en="AI-Powered Automations" data-fr="Automatisations IA">AI-Powered Automations</option>
-          <option value="leadgen-crm" data-en="Lead Generation &amp; CRM" data-fr="G&eacute;n&eacute;ration de leads &amp; CRM">Lead Generation &amp; CRM</option>
-          <option value="voice-agents" data-en="Intelligent Customer Service &amp; AI Agents" data-fr="Service client intelligent &amp; Agents IA">Intelligent Customer Service &amp; AI Agents</option>
-          <option value="other" data-en="Other" data-fr="Autre">Other</option>
-        </select>
-        <textarea name="details" rows="4" placeholder="Tell us about your project..."></textarea>
-        <button type="submit" class="form-submit en">Send Message</button>
-        <button type="submit" class="form-submit fr">Envoyer</button>
-      </form>
+      <div class="fr">
+        <h2>Travaillons ensemble.</h2>
+        <p style="color:#999;margin-bottom:2rem">R&eacute;servez un appel d&eacute;couverte gratuit de 30 minutes. On identifiera vos meilleures opportunit&eacute;s d'automatisation et on vous montrera ce qui est possible.</p>
+        <button onclick="openCal()" class="calendly-cta" style="cursor:pointer;border:none">R&eacute;server un appel</button>
+      </div>
+      <!-- Trust reinforcement near CTA -->
+      <div class="trust-mini" style="margin-top:2rem">
+        <p class="quote-mini en">"<strong>Abdel delivers real results</strong> — our system is now automated, centralized, and scalable." — Irfaan</p>
+        <p class="quote-mini fr">"<strong>Abdel livre de vrais r&eacute;sultats</strong> — notre syst&egrave;me est automatis&eacute;, centralis&eacute; et scalable." — Irfaan</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1149,7 +1129,7 @@ section{padding:6rem 2rem}
   <h2 class="fr">Commencez avec un appel gratuit<br>de 30 minutes.</h2>
   <p class="en">We'll map your biggest automation opportunities and show you what's possible.</p>
   <p class="fr">On identifie vos meilleures opportunit&eacute;s d'automatisation et on vous montre ce qui est possible.</p>
-  <a href="https://calendly.com/hello-therelaylabs/30min" target="_blank" class="pill-btn"><div class="pill-text-wrap"><span class="pill-text en">Let's talk</span><span class="pill-text fr">Discutons</span><span class="pill-text-hover en">Let's talk</span><span class="pill-text-hover fr">Discutons</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+  <button onclick="openCal()" class="pill-btn" style="cursor:pointer;border:none"><div class="pill-text-wrap"><span class="pill-text en">Let's talk</span><span class="pill-text fr">Discutons</span><span class="pill-text-hover en">Let's talk</span><span class="pill-text-hover fr">Discutons</span></div><div class="pill-icon-box"><svg class="pill-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="pill-icon-hover" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></button>
   <svg class="footer-cta-logo" viewBox="0 0 200 180" fill="none">
     <rect x="10" y="10" width="22" height="155" rx="11" stroke="#fff" stroke-width="1.5" fill="none"/>
     <path d="M32 10 H100 C135 10 158 33 158 60 C158 87 135 110 100 110 H32" stroke="#fff" stroke-width="1.5" fill="none"/>
@@ -1160,13 +1140,8 @@ section{padding:6rem 2rem}
 </section>
 
 <!-- ==================== FOOTER ==================== -->
-<footer class="footer" style="flex-wrap:wrap;gap:1rem">
-  <div>
-    <span>&copy; 2026 The Relay Labs</span>
-    <span style="margin-left:1rem">Montreal, QC</span>
-    <span style="margin-left:1rem"><a href="mailto:hello@therelaylabs.com" style="color:#4ADE80">hello@therelaylabs.com</a></span>
-  </div>
-  <div class="footer-links">
+<footer class="footer" style="flex-wrap:wrap;gap:1.5rem;flex-direction:column;align-items:center;text-align:center">
+  <div class="footer-links" style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
     <a href="#services" class="en">Services</a>
     <a href="#services" class="fr">Services</a>
     <a href="#work" class="en">Work</a>
@@ -1175,6 +1150,13 @@ section{padding:6rem 2rem}
     <a href="#contact" class="en">Contact</a>
     <a href="#contact" class="fr">Contact</a>
     <a href="https://www.linkedin.com/in/abdel-boughaleb/" target="_blank">LinkedIn</a>
+  </div>
+  <div style="color:#555;font-size:0.85rem;display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;align-items:center">
+    <span>&copy; 2026 The Relay Labs</span>
+    <span style="color:#333">&middot;</span>
+    <span>Montreal, QC</span>
+    <span style="color:#333">&middot;</span>
+    <a href="mailto:hello@therelaylabs.com" style="color:#4ADE80">hello@therelaylabs.com</a>
   </div>
 </footer>
 
@@ -1210,30 +1192,8 @@ document.querySelectorAll('[data-set-lang]').forEach(btn => {
     document.documentElement.setAttribute('data-lang', lang);
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    // Update form placeholders
-    if (lang === 'fr') {
-      document.querySelector('[name="name"]').placeholder = 'Nom';
-      document.querySelector('[name="email"]').placeholder = 'Courriel';
-      document.querySelector('[name="company"]').placeholder = 'Entreprise';
-      document.querySelector('[name="details"]').placeholder = 'D\u00e9tails du projet';
-    } else {
-      document.querySelector('[name="name"]').placeholder = 'Name';
-      document.querySelector('[name="email"]').placeholder = 'Email';
-      document.querySelector('[name="company"]').placeholder = 'Company';
-      document.querySelector('[name="details"]').placeholder = 'Project details';
-    }
-    // Update select options text for current language
-    document.querySelectorAll('#service-select option').forEach(opt => {
-      const text = opt.getAttribute('data-' + lang);
-      if (text) opt.textContent = text;
-    });
   });
 });
-// Set default EN placeholders
-document.querySelector('[name="name"]').placeholder = 'Name';
-document.querySelector('[name="email"]').placeholder = 'Email';
-document.querySelector('[name="company"]').placeholder = 'Company';
-document.querySelector('[name="details"]').placeholder = 'Project details';
 
 // Mobile menu
 document.getElementById('mobile-toggle').addEventListener('click', () => {
@@ -1288,54 +1248,17 @@ const counterObs = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 document.querySelectorAll('.case-card').forEach(c => counterObs.observe(c));
 
-// Contact form — sends to Make webhook, falls back to mailto
-const MAKE_WEBHOOK_URL = ''; // Paste your Make webhook URL here
-document.getElementById('contact-form').addEventListener('submit', async e => {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('.form-submit');
-  const lang = document.documentElement.getAttribute('data-lang');
-  const data = {
-    name: form.name.value,
-    email: form.email.value,
-    company: form.company.value,
-    service: form.service.value,
-    details: form.details.value,
-    lang: lang,
-    submitted_at: new Date().toISOString()
-  };
-  btn.disabled = true;
-  btn.textContent = lang === 'fr' ? 'Envoi...' : 'Sending...';
-  let sent = false;
-  if (MAKE_WEBHOOK_URL) {
-    try {
-      const res = await fetch(MAKE_WEBHOOK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-      if (res.ok) sent = true;
-    } catch (err) { console.warn('Webhook failed, falling back to mailto', err); }
-  }
-  if (!sent) {
-    const subject = encodeURIComponent('New lead from therelaylabs.com: ' + data.name);
-    const body = encodeURIComponent(
-      'Name: ' + data.name + '\nEmail: ' + data.email + '\nCompany: ' + data.company +
-      '\nService: ' + data.service + '\nDetails: ' + data.details
-    );
-    window.location.href = 'mailto:hello@therelaylabs.com?subject=' + subject + '&body=' + body;
-  }
-  btn.textContent = lang === 'fr' ? 'Envoy\u00e9 !' : 'Sent!';
-  btn.style.background = 'linear-gradient(135deg,#a78bfa,#4ADE80)';
-  btn.style.color = '#fff';
-  btn.disabled = false;
-  setTimeout(() => {
-    btn.textContent = lang === 'fr' ? 'Envoyer' : 'Send Message';
-    btn.style.background = '#fff';
-    btn.style.color = '#0a0a0a';
-    form.reset();
-  }, 2500);
-});
+// Cal.com popup helper
+function openCal() {
+  Cal('ui', {styles:{branding:{brandColor:'#4ADE80'}},hideEventTypeDetails:false,layout:'month_view'});
+}
+</script>
+
+<!-- Cal.com Embed -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://cal.com"});
+Cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 </body>
 </html>
